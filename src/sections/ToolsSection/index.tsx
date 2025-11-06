@@ -48,7 +48,7 @@ export const ToolsSection = () => {
   }, []);
 
   return (
-    <div className="relative text-[15.1297px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[24.2075px] max-w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] mx-auto pt-[50px] pb-20 md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px] md:max-w-none md:mx-0">
+    <div className="relative text-[15.1297px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[24.2075px] max-w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] mx-auto pt-[30px] pb-[20px] md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px] md:max-w-none md:mx-0">
       {/* Arrière-plan mathématique flottant */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
         <FloatingMathScreen />
@@ -74,7 +74,7 @@ export const ToolsSection = () => {
           </div>
           <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-left md:text-[15.667px] md:leading-[25.0672px] md:w-[60%]">
             <h2 className="text-cyan-400 text-[42px] font-bold box-border caret-transparent leading-[50.4px] text-left my-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:my-[19.5838px]">
-              Fiable pour maintenir les lancements sans incidents
+              La fiabilité au cœur de chaque lancement, pour un succès garanti.
             </h2>
             <TrustedByLogos />
           </div>

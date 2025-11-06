@@ -1,5 +1,5 @@
 import { NavbarLogo } from "@/sections/Navbar/components/NavbarLogo";
-import { DesktopMenu } from "@/sections/Navbar/components/DesktopMenu";
+//import { DesktopMenu } from "@/sections/Navbar/components/DesktopMenu";
 import { MobileMenuButton } from "@/sections/Navbar/components/MobileMenuButton";
 
 export const Navbar = () => {
@@ -10,7 +10,7 @@ export const Navbar = () => {
     >
       <div className="text-[15.1297px] items-center box-border caret-transparent flex justify-between leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <NavbarLogo />
-        <DesktopMenu />
+        {/* <DesktopMenu /> */}
       </div>
       <div
         aria-label="menu"

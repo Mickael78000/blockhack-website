@@ -3,7 +3,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 
 export const AuditsStatsSection = () => {
   return (
-    <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-center pb-[30.2594px] md:text-[15.667px] md:leading-[25.0672px] md:pb-[97.9189px]">
+    <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-center pb-[20px] md:text-[15.667px] md:leading-[25.0672px] md:pb-[20px]">
       <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <AnimatedSection direction="left">
           <h2 className="text-cyan-400 text-[42px] font-bold box-border caret-transparent leading-[50.4px] text-left my-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:my-[19.5838px]">

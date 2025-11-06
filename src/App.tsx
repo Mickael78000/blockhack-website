@@ -11,7 +11,6 @@ import { ToolsSection } from "@/sections/ToolsSection";
 import { AuditsStatsSection } from "@/sections/AuditsStatsSection";
 import { EducationSection } from "@/sections/EducationSection";
 import { TeamSection } from "@/sections/TeamSection";
-import { BlogSection } from "@/sections/BlogSection";
 import { Footer } from "@/sections/Footer";
 
 export const App = () => {
@@ -53,7 +52,7 @@ export const App = () => {
             <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] overflow-hidden md:text-[15.667px] md:leading-[25.0672px]">
               <Hero />
             </div>
-            <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] bg-[position:0px_0px] pt-[50px] md:text-[15.667px] md:leading-[25.0672px]">
+            <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] bg-[position:0px_0px] pt-[30px] md:text-[15.667px] md:leading-[25.0672px]">
               <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
                 <CaseStudiesCarousel />
               </div>
@@ -63,7 +62,6 @@ export const App = () => {
             <AuditsStatsSection />
             <EducationSection />
             <TeamSection />
-            <BlogSection />
             <Footer />
           </div>
         </div>

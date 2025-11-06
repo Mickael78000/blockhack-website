@@ -1,5 +1,5 @@
 import { HeroContent } from "@/sections/Hero/components/HeroContent";
-import { ClientLogos } from "@/sections/Hero/components/ClientLogos";
+//import { ClientLogos } from "@/sections/Hero/components/ClientLogos";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
@@ -23,7 +23,7 @@ export const Hero = () => {
           />
         </motion.div>
         <HeroContent />
-        <ClientLogos />
+        {/* <ClientLogos /> */}
       </div>
     </div>
   );

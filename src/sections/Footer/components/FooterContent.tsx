@@ -23,12 +23,11 @@ export const FooterContent = () => {
           links={[
             { text: "Services", href: "#services" },
             { text: "Audits", href: "#audits" },
-            { text: "Équipe", href: "#team" },
-            {
-              text: "Carrière",
-              href: "https://ackeeblockchain.recruitee.com/",
-              hasExternalIcon: true,
-            },
+            // {
+            //   text: "Carrière",
+            //   href: "https://ackeeblockchain.recruitee.com/",
+            //   hasExternalIcon: true,
+            // },
           ]}
         />
         <FooterColumn
@@ -36,8 +35,8 @@ export const FooterContent = () => {
           variant="links"
           links={[
             {
-              text: "Wake",
-              href: "https://getwake.io/",
+              text: "Foundry",
+              href: "https://getfoundry.sh/",
               hasExternalIcon: true,
             },
             {
@@ -46,7 +45,7 @@ export const FooterContent = () => {
             },
           ]}
         />
-        <FooterColumn
+        {/* <FooterColumn
           title="Apprendre"
           variant="links"
           links={[
@@ -66,7 +65,7 @@ export const FooterContent = () => {
               href: "#ethereum-auditors-bootcamp",
             },
           ]}
-        />
+        /> */}
       </div>
       <FooterSocials />
     </div>
