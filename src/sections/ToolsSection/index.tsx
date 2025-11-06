@@ -8,6 +8,7 @@ export const ToolsSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   // Detect mobile device
   useEffect(() => {
@@ -80,12 +81,20 @@ export const ToolsSection = () => {
       const playPromise = video.play();
 
       if (playPromise !== undefined) {
-        playPromise.catch(() => {
+        playPromise.then(() => {
+          setIsPlaying(true);
+        }).catch(() => {
           video.muted = true;
-          video.play().catch(() => undefined);
+          video.play().then(() => setIsPlaying(true)).catch(() => undefined);
         });
       }
     };
+
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+    
+    video.addEventListener('play', handlePlay);
+    video.addEventListener('pause', handlePause);
 
     // Ajouter un écouteur d'événement de fin comme solution de secours
     video.addEventListener("ended", handleEnded);
@@ -99,6 +108,8 @@ export const ToolsSection = () => {
     return () => {
       video.removeEventListener("loadeddata", tryPlay);
       video.removeEventListener("ended", handleEnded);
+      video.removeEventListener('play', handlePlay);
+      video.removeEventListener('pause', handlePause);
     };
   }, [shouldLoadVideo, isMobile]);
 
@@ -112,22 +123,43 @@ export const ToolsSection = () => {
       <div className="relative z-10 text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <div className="relative text-[15.1297px] box-border caret-transparent flex flex-col gap-10 leading-[24.2075px] mt-[110px] mx-auto w-full max-w-[980px] px-[10px] md:text-[15.667px] md:leading-[25.0672px] md:mt-[235px] md:flex-row md:items-start md:gap-[51px] md:px-0">
           <div ref={containerRef} className="w-full max-w-[300px] mx-auto md:max-w-[500px] md:w-[40%]">
-            <div className="overflow-hidden rounded-[24px] shadow-xl bg-gray-900">
+            <div className="relative overflow-hidden rounded-[24px] shadow-xl bg-gray-900">
               {shouldLoadVideo ? (
-                <video
-                  ref={videoRef}
-                  className="h-full w-full object-cover"
-                  src="/videos/trusted-by.mp4"
-                  autoPlay={!isMobile}
-                  loop
-                  muted
-                  playsInline
-                  preload={isMobile ? "metadata" : "auto"}
-                  poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23111827' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%2322d3ee' font-family='sans-serif' font-size='24'%3ELoading...%3C/text%3E%3C/svg%3E"
-                  data-testid="trusted-video"
-                >
-                  Votre navigateur ne supporte pas la balise vidéo.
-                </video>
+                <>
+                  <video
+                    ref={videoRef}
+                    className="h-full w-full object-cover"
+                    src="/videos/trusted-by.mp4"
+                    autoPlay={!isMobile}
+                    loop
+                    muted
+                    playsInline
+                    preload={isMobile ? "metadata" : "auto"}
+                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23111827' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%2322d3ee' font-family='sans-serif' font-size='24'%3ELoading...%3C/text%3E%3C/svg%3E"
+                    data-testid="trusted-video"
+                  >
+                    Votre navigateur ne supporte pas la balise vidéo.
+                  </video>
+                  {/* Play button overlay for mobile */}
+                  {isMobile && !isPlaying && (
+                    <button
+                      onClick={() => {
+                        const video = videoRef.current;
+                        if (video) {
+                          video.play().then(() => setIsPlaying(true)).catch(() => undefined);
+                        }
+                      }}
+                      className="absolute inset-0 flex items-center justify-center bg-black/50 transition-opacity hover:bg-black/60"
+                      aria-label="Play video"
+                    >
+                      <div className="w-16 h-16 rounded-full bg-cyan-400 flex items-center justify-center shadow-lg">
+                        <svg className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </button>
+                  )}
+                </>
               ) : (
                 <div className="w-full h-full min-h-[300px] flex items-center justify-center bg-gray-900">
                   <p className="text-cyan-400 text-lg">Loading video...</p>

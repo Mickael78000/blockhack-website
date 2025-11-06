@@ -92,17 +92,17 @@ function FloatingLayer() {
     const spawn = () => {
       setNodes((prev) => {
         const next = [...prev];
-        // keep a soft cap on count
-        if (next.length > 40) next.shift();
+        // Reduced cap for better performance
+        if (next.length > 15) next.shift();
         next.push(makeNode(idRef.current++, STRINGS.current));
         return next;
       });
     };
-    // salve initiale
-    for (let i = 0; i < 16; i++) spawn();
-    // cadence d'apparition lente et aléatoire
+    // Reduced initial spawn for faster load
+    for (let i = 0; i < 6; i++) spawn();
+    // Slower cadence for better performance
     const tick = () => {
-      const jitter = 800 + Math.random() * 900; // 0.8s - 1.7s
+      const jitter = 1500 + Math.random() * 1500; // 1.5s - 3s (slower)
       timerRef.current = setTimeout(() => {
         spawn();
         tick();
@@ -214,6 +214,8 @@ function FloatingItem({ data, onEnd }: FloatingItemProps) {
         opacity: "var(--op)",
         left: 0,
         top: 0,
+        transform: 'translateZ(0)', // GPU acceleration
+        backfaceVisibility: 'hidden', // Optimize rendering
         ...data.cssVars,
       } as React.CSSProperties}
       onAnimationEnd={onEnd}
