@@ -1,6 +1,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
 @font-face {
   /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
   font-family: 'webflow-icons';

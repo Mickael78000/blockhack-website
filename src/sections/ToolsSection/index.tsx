@@ -104,14 +104,14 @@ export const ToolsSection = () => {
 
   return (
     <AnimatedSection direction="up" delay={0.2}>
-      <div className="relative text-[15.1297px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[24.2075px] w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] pt-[30px] pb-[20px] md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px]">
-        {/* Arrière-plan mathématique flottant */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+      <div className="relative text-[15.1297px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[24.2075px] w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] pt-[30px] pb-[20px] overflow-hidden md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px]">
+        {/* Arrière-plan mathématique flottant avec transition de fondu */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-0 animate-fade-in" style={{ animation: 'fadeIn 1.5s ease-in-out forwards' }}>
           <FloatingMathScreen />
         </div>
       <div className="relative z-10 text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <div className="relative text-[15.1297px] box-border caret-transparent flex flex-col gap-10 leading-[24.2075px] mt-[110px] mx-auto w-full max-w-[980px] px-[10px] md:text-[15.667px] md:leading-[25.0672px] md:mt-[235px] md:flex-row md:items-start md:gap-[51px] md:px-0">
-          <div ref={containerRef} className="w-full max-w-[300px] mx-auto md:max-w-[250px] md:w-[20%]">
+          <div ref={containerRef} className="w-full max-w-[300px] mx-auto md:max-w-[500px] md:w-[40%]">
             <div className="overflow-hidden rounded-[24px] shadow-xl bg-gray-900">
               {shouldLoadVideo ? (
                 <video
