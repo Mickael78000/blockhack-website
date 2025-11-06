@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { TrustedByLogos } from "@/sections/ToolsSection/components/TrustedByLogos";
 import FloatingMathScreen from "@/components/floating_math_crypto_names_screen_react";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 export const ToolsSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -93,14 +94,15 @@ export const ToolsSection = () => {
   }, [shouldLoadVideo, isMobile]);
 
   return (
-    <div className="relative text-[15.1297px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[24.2075px] max-w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] mx-auto pt-[30px] pb-[20px] md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px] md:max-w-none md:mx-0">
-      {/* Arrière-plan mathématique flottant */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-        <FloatingMathScreen />
-      </div>
+    <AnimatedSection direction="up" delay={0.2}>
+      <div className="relative text-[15.1297px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[24.2075px] w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] pt-[30px] pb-[20px] md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px]">
+        {/* Arrière-plan mathématique flottant */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+          <FloatingMathScreen />
+        </div>
       <div className="relative z-10 text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <div className="relative text-[15.1297px] box-border caret-transparent flex flex-col gap-10 leading-[24.2075px] mt-[110px] mx-auto w-full max-w-[980px] px-[10px] md:text-[15.667px] md:leading-[25.0672px] md:mt-[235px] md:flex-row md:items-start md:gap-[51px] md:px-0">
-          <div ref={containerRef} className="w-full md:w-[40%]">
+          <div ref={containerRef} className="w-full max-w-[300px] mx-auto md:max-w-[250px] md:w-[20%]">
             <div className="overflow-hidden rounded-[24px] shadow-xl bg-gray-900">
               {shouldLoadVideo ? (
                 <video
@@ -133,5 +135,6 @@ export const ToolsSection = () => {
         </div>
       </div>
     </div>
+    </AnimatedSection>
   );
 };

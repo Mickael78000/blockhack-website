@@ -1,6 +1,5 @@
 import { NavbarLogo } from "@/sections/Navbar/components/NavbarLogo";
 //import { DesktopMenu } from "@/sections/Navbar/components/DesktopMenu";
-import { MobileMenuButton } from "@/sections/Navbar/components/MobileMenuButton";
 
 export const Navbar = () => {
   return (
@@ -12,15 +11,6 @@ export const Navbar = () => {
         <NavbarLogo />
         {/* <DesktopMenu /> */}
       </div>
-      <div
-        aria-label="menu"
-        role="button"
-        className="relative text-2xl box-border caret-transparent block float-right leading-[38.4px] min-h-[auto] min-w-[auto] p-[18px] md:hidden md:min-h-0 md:min-w-0"
-      >
-        <div className="font-normal box-border caret-transparent hidden leading-6 font-webflow_icons md:block before:accent-auto before:caret-transparent before:text-white/70 before:text-2xl before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-6 before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-webflow_icons"></div>
-      </div>
-      <MobileMenuButton />
-      <div className="absolute text-[15.1297px] box-border caret-transparent hidden leading-[24.2075px] z-[1] overflow-hidden right-0 top-0 md:text-[15.667px] md:leading-[25.0672px]"></div>
     </div>
   );
 };
