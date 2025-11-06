@@ -1,13 +1,53 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TrustedByLogos } from "@/sections/ToolsSection/components/TrustedByLogos";
 import FloatingMathScreen from "@/components/floating_math_crypto_names_screen_react";
 
 export const ToolsSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Lazy load video with Intersection Observer
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoadVideo(true);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: '50px', // Start loading 50px before video is visible
+        threshold: 0.1,
+      }
+    );
+
+    observer.observe(container);
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) {
+    if (!video || !shouldLoadVideo) {
       return;
     }
 
@@ -22,6 +62,11 @@ export const ToolsSection = () => {
     };
 
     const tryPlay = () => {
+      // On mobile, don't autoplay to save bandwidth
+      if (isMobile) {
+        return;
+      }
+
       const playPromise = video.play();
 
       if (playPromise !== undefined) {
@@ -45,7 +90,7 @@ export const ToolsSection = () => {
       video.removeEventListener("loadeddata", tryPlay);
       video.removeEventListener("ended", handleEnded);
     };
-  }, []);
+  }, [shouldLoadVideo, isMobile]);
 
   return (
     <div className="relative text-[15.1297px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[24.2075px] max-w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] mx-auto pt-[30px] pb-[20px] md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px] md:max-w-none md:mx-0">
@@ -55,21 +100,28 @@ export const ToolsSection = () => {
       </div>
       <div className="relative z-10 text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <div className="relative text-[15.1297px] box-border caret-transparent flex flex-col gap-10 leading-[24.2075px] mt-[110px] mx-auto w-full max-w-[980px] px-[10px] md:text-[15.667px] md:leading-[25.0672px] md:mt-[235px] md:flex-row md:items-start md:gap-[51px] md:px-0">
-          <div className="w-full md:w-[40%]">
-            <div className="overflow-hidden rounded-[24px] shadow-xl">
-              <video
-                ref={videoRef}
-                className="h-full w-full object-cover"
-                src="/videos/trusted-by.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                data-testid="trusted-video"
-              >
-                Votre navigateur ne supporte pas la balise vidéo.
-              </video>
+          <div ref={containerRef} className="w-full md:w-[40%]">
+            <div className="overflow-hidden rounded-[24px] shadow-xl bg-gray-900">
+              {shouldLoadVideo ? (
+                <video
+                  ref={videoRef}
+                  className="h-full w-full object-cover"
+                  src="/videos/trusted-by.mp4"
+                  autoPlay={!isMobile}
+                  loop
+                  muted
+                  playsInline
+                  preload={isMobile ? "metadata" : "auto"}
+                  poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect fill='%23111827' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%2322d3ee' font-family='sans-serif' font-size='24'%3ELoading...%3C/text%3E%3C/svg%3E"
+                  data-testid="trusted-video"
+                >
+                  Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+              ) : (
+                <div className="w-full h-full min-h-[300px] flex items-center justify-center bg-gray-900">
+                  <p className="text-cyan-400 text-lg">Loading video...</p>
+                </div>
+              )}
             </div>
           </div>
           <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-left md:text-[15.667px] md:leading-[25.0672px] md:w-[60%]">

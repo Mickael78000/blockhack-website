@@ -27,7 +27,7 @@ describe("ToolsSection", () => {
     expect(screen.getByRole("heading", { name: /solidity \(foundry\)/i })).toBeInTheDocument();
   });
 
-  it("shows the trusted by heading and embeds the showcase video", () => {
+  it("shows the trusted by heading and video container", () => {
     render(<ToolsSection />);
 
     expect(
@@ -37,10 +37,7 @@ describe("ToolsSection", () => {
       }),
     ).toBeInTheDocument();
 
-    const video = screen.getByTestId("trusted-video") as HTMLVideoElement;
-    expect(video).toHaveAttribute("src", "/videos/trusted-by.mp4");
-    expect(video.muted).toBe(true);
-    expect(video.loop).toBe(true);
-    expect(video.autoplay).toBe(true);
+    // Video uses lazy loading, so initially shows loading placeholder
+    expect(screen.getByText(/loading video/i)).toBeInTheDocument();
   });
 });
