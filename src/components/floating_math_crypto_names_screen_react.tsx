@@ -107,7 +107,7 @@ function FloatingLayer() {
       minInterval: 2500,  // Mobile: slower spawning (2.5-5s)
       maxInterval: 5000
     } : {
-      maxNodes: 15,       // Desktop: 15 nodes max
+      maxNodes: 30,       // Desktop: 30 nodes max
       initialSpawn: 6,    // Desktop: start with 6
       minInterval: 1500,  // Desktop: moderate spawning (1.5-3s)
       maxInterval: 3000
