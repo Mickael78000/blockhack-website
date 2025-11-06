@@ -42,6 +42,7 @@ export default function FloatingMathScreen() {
 
 function FloatingLayer() {
   const [nodes, setNodes] = useState<FloatingNode[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
   const idRef = useRef(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -88,31 +89,56 @@ function FloatingLayer() {
     { text: "Architecture Von Neumann", isLatex: false },
   ]);
 
+  // Detect mobile device
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    // Different settings for mobile vs desktop
+    const config = isMobile ? {
+      maxNodes: 8,        // Mobile: only 8 nodes max
+      initialSpawn: 3,    // Mobile: start with just 3
+      minInterval: 2500,  // Mobile: slower spawning (2.5-5s)
+      maxInterval: 5000
+    } : {
+      maxNodes: 15,       // Desktop: 15 nodes max
+      initialSpawn: 6,    // Desktop: start with 6
+      minInterval: 1500,  // Desktop: moderate spawning (1.5-3s)
+      maxInterval: 3000
+    };
+
     const spawn = () => {
       setNodes((prev) => {
         const next = [...prev];
-        // Reduced cap for better performance
-        if (next.length > 15) next.shift();
+        if (next.length > config.maxNodes) next.shift();
         next.push(makeNode(idRef.current++, STRINGS.current));
         return next;
       });
     };
-    // Reduced initial spawn for faster load
-    for (let i = 0; i < 6; i++) spawn();
-    // Slower cadence for better performance
+    
+    // Initial spawn
+    for (let i = 0; i < config.initialSpawn; i++) spawn();
+    
+    // Spawn new nodes periodically
     const tick = () => {
-      const jitter = 1500 + Math.random() * 1500; // 1.5s - 3s (slower)
+      const jitter = config.minInterval + Math.random() * (config.maxInterval - config.minInterval);
       timerRef.current = setTimeout(() => {
         spawn();
         tick();
       }, jitter);
     };
     tick();
+    
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, []);
+  }, [isMobile]);
 
   const handleEnd = (id: number) => {
     setNodes((prev) => prev.filter((n) => n.id !== id));
@@ -150,10 +176,12 @@ function makeNode(id: number, pool: Array<{ text: string; isLatex: boolean }>): 
     endX = `${rand(-10, 110)}vw`; endY = `${-pad}vh`;
   }
 
-  const dur = rand(40, 70); // secondes – mouvement très lent
-  const rotStart = `${rand(-20, 20)}deg`;
-  const rotEnd = `${rand(-20, 20)}deg`;
-  const fontSize = `${rand(14, 28)}px`;
+  // Mobile: faster, simpler animations. Desktop: slower, more complex
+  const isMobileDevice = window.innerWidth < 768;
+  const dur = isMobileDevice ? rand(30, 50) : rand(40, 70); // Mobile: faster animations
+  const rotStart = isMobileDevice ? '0deg' : `${rand(-20, 20)}deg`; // Mobile: no rotation
+  const rotEnd = isMobileDevice ? '0deg' : `${rand(-20, 20)}deg`;
+  const fontSize = isMobileDevice ? `${rand(12, 20)}px` : `${rand(14, 28)}px`; // Mobile: smaller text
   const weight = randChoice(["font-light", "font-normal", "font-medium"]);
   const blur = Math.random() < 0.2 ? "blur-[0.5px]" : "";
   const glow = Math.random() < 0.5 ? "[text-shadow:0_0_8px_rgba(255,255,255,0.25)]" : "";
@@ -206,7 +234,7 @@ function FloatingItem({ data, onEnd }: FloatingItemProps) {
 
   return (
     <div
-      className={`pointer-events-none absolute select-none will-change-transform ${data.weight} ${data.blur} ${data.glow}`}
+      className={`pointer-events-none absolute select-none ${data.weight} ${data.blur} ${data.glow}`}
       style={{
         animation: `drift var(--dur) linear forwards`,
         fontFamily: "'Computer Modern Serif', 'Latin Modern Roman', serif",
@@ -214,8 +242,10 @@ function FloatingItem({ data, onEnd }: FloatingItemProps) {
         opacity: "var(--op)",
         left: 0,
         top: 0,
-        transform: 'translateZ(0)', // GPU acceleration
-        backfaceVisibility: 'hidden', // Optimize rendering
+        transform: 'translate3d(0, 0, 0)', // Better GPU acceleration
+        backfaceVisibility: 'hidden',
+        willChange: 'transform, opacity', // Hint to browser for optimization
+        contain: 'layout style paint', // CSS containment for better performance
         ...data.cssVars,
       } as React.CSSProperties}
       onAnimationEnd={onEnd}
@@ -231,14 +261,18 @@ function FloatingItem({ data, onEnd }: FloatingItemProps) {
 
 const styles = `
 @keyframes drift {
-  from {
-    transform: translate(var(--startX), var(--startY)) rotate(var(--startR));
+  0% {
+    transform: translate3d(var(--startX), var(--startY), 0) rotate(var(--startR));
     opacity: 0;
   }
-  10% { opacity: var(--op); }
-  90% { opacity: var(--op); }
-  to {
-    transform: translate(var(--endX), var(--endY)) rotate(var(--endR));
+  10% { 
+    opacity: var(--op); 
+  }
+  90% { 
+    opacity: var(--op); 
+  }
+  100% {
+    transform: translate3d(var(--endX), var(--endY), 0) rotate(var(--endR));
     opacity: 0;
   }
 }
