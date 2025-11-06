@@ -220,4 +220,111 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  /* Responsive enhancements */
+  html {
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+    /* Prevent text size adjustment on orientation change */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* Better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    /* Prevent horizontal overflow */
+    overflow-x: hidden;
+    /* Better touch scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Minimum safe touch target size */
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Improve tap target size on mobile */
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better touch targets for interactive elements */
+  @media (max-width: 768px) {
+    button, a[role="button"], input[type="button"], input[type="submit"] {
+      padding: 12px 16px;
+    }
+  }
+
+  /* Prevent zoom on input focus on iOS */
+  @media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="search"],
+    textarea,
+    select {
+      font-size: 16px;
+    }
+  }
+
+  /* Better image responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Prevent horizontal overflow from pre/code blocks */
+  pre, code {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  /* Better table responsiveness */
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+
+  /* Focus visible for better accessibility */
+  *:focus-visible {
+    outline: 2px solid rgb(34, 211, 238);
+    outline-offset: 2px;
+  }
+
+  /* Remove default focus outline but keep for keyboard navigation */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Improve scrollbar on mobile */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(34, 211, 238, 0.5);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 211, 238, 0.7);
+  }
+
+  /* Better safe area support for notched devices */
+  @supports (padding: max(0px)) {
+    body {
+      padding-left: max(0px, env(safe-area-inset-left));
+      padding-right: max(0px, env(safe-area-inset-right));
+    }
+  }
 }

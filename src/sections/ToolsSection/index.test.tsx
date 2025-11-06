@@ -23,8 +23,8 @@ describe("ToolsSection", () => {
   it("lists all tool cards with their titles", () => {
     render(<ToolsSection />);
 
-    expect(screen.getByRole("heading", { name: /^wake$/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /solidity \(wake\)/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /^foundry$/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /solidity \(foundry\)/i })).toBeInTheDocument();
   });
 
   it("shows the trusted by heading and embeds the showcase video", () => {
