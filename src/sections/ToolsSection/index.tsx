@@ -26,24 +26,33 @@ export const ToolsSection = () => {
     const container = containerRef.current;
     if (!container) return;
 
+    // Fallback: load video after 2 seconds if observer doesn't trigger
+    const fallbackTimer = setTimeout(() => {
+      setShouldLoadVideo(true);
+    }, 2000);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            clearTimeout(fallbackTimer);
             setShouldLoadVideo(true);
             observer.disconnect();
           }
         });
       },
       {
-        rootMargin: '50px', // Start loading 50px before video is visible
-        threshold: 0.1,
+        rootMargin: '100px', // Start loading 100px before video is visible
+        threshold: 0.01, // Lower threshold for better mobile detection
       }
     );
 
     observer.observe(container);
 
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(fallbackTimer);
+      observer.disconnect();
+    };
   }, []);
 
   useEffect(() => {
