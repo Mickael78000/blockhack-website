@@ -102,14 +102,14 @@ export const AuditRequest = () => {
       
       <div className="relative pt-32 pb-20 px-6">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent"></div>
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10"></div>
 
         <div className="container mx-auto max-w-4xl relative z-10">
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Demander un <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500">Audit</span>
+              Demander un <span className="text-cyan-400">Audit</span>
             </h1>
             <p className="text-gray-400 text-lg">
               Remplissez le formulaire ci-dessous pour demander un audit de sécurité pour votre projet blockchain
@@ -120,7 +120,7 @@ export const AuditRequest = () => {
           <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
             {/* Personal Information */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-fuchsia-400">Informations de contact</h2>
+              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Informations de contact</h2>
               
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -133,7 +133,7 @@ export const AuditRequest = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors"
                     placeholder="Jean Dupont"
                   />
                 </div>
@@ -148,7 +148,7 @@ export const AuditRequest = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-colors"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors"
                     placeholder="jean@exemple.com"
                   />
                 </div>
@@ -163,7 +163,7 @@ export const AuditRequest = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors"
                   placeholder="Nom de votre entreprise"
                 />
               </div>
@@ -171,7 +171,7 @@ export const AuditRequest = () => {
 
             {/* Project Details */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-fuchsia-400">Détails du projet</h2>
+              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Détails du projet</h2>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -183,9 +183,9 @@ export const AuditRequest = () => {
                     value={formData.projectType}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-colors text-white appearance-none cursor-pointer"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white appearance-none cursor-pointer"
                     style={{
-                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a855f7'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2322d3ee'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'right 0.75rem center',
                       backgroundSize: '1.5em 1.5em'
@@ -212,9 +212,9 @@ export const AuditRequest = () => {
                     value={formData.blockchain}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-colors text-white appearance-none cursor-pointer"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white appearance-none cursor-pointer"
                     style={{
-                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a855f7'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2322d3ee'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'right 0.75rem center',
                       backgroundSize: '1.5em 1.5em'
@@ -243,9 +243,9 @@ export const AuditRequest = () => {
                   name="urgency"
                   value={formData.urgency}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-colors text-white appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors text-white appearance-none cursor-pointer"
                   style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a855f7'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2322d3ee'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'right 0.75rem center',
                     backgroundSize: '1.5em 1.5em'
@@ -261,7 +261,7 @@ export const AuditRequest = () => {
 
             {/* Message */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-fuchsia-400">Votre demande</h2>
+              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Votre demande</h2>
 
               <div className="mb-6">
                 <label className="block text-sm font-medium mb-2">
@@ -273,7 +273,7 @@ export const AuditRequest = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors"
                   placeholder="Audit de sécurité pour mon protocole DeFi"
                 />
               </div>
@@ -288,7 +288,7 @@ export const AuditRequest = () => {
                   onChange={handleInputChange}
                   required
                   rows={8}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-fuchsia-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors resize-none"
                   placeholder="Décrivez votre projet, vos besoins en matière d'audit, et toute information pertinente..."
                 />
                 <p className="text-sm text-gray-400 mt-2">
@@ -299,12 +299,12 @@ export const AuditRequest = () => {
 
             {/* Attachments */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-fuchsia-400">Pièces jointes</h2>
+              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Pièces jointes</h2>
               
               <div className="mb-4">
-                <label className="flex items-center justify-center w-full px-4 py-6 bg-white/5 border-2 border-dashed border-white/20 rounded-lg cursor-pointer hover:bg-white/10 hover:border-fuchsia-500/50 transition-all">
+                <label className="flex items-center justify-center w-full px-4 py-6 bg-white/5 border-2 border-dashed border-white/20 rounded-lg cursor-pointer hover:bg-white/10 hover:border-cyan-400/50 transition-all">
                   <div className="text-center">
-                    <Upload className="w-8 h-8 mx-auto mb-2 text-fuchsia-400" />
+                    <Upload className="w-8 h-8 mx-auto mb-2 text-cyan-400" />
                     <p className="text-sm text-gray-400">
                       Cliquez pour ajouter des fichiers
                     </p>
@@ -331,8 +331,8 @@ export const AuditRequest = () => {
                       className="flex items-center justify-between px-4 py-3 bg-white/5 border border-white/10 rounded-lg"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded bg-fuchsia-500/20 flex items-center justify-center">
-                          <span className="text-xs text-fuchsia-400">
+                        <div className="w-8 h-8 rounded bg-cyan-400/20 flex items-center justify-center">
+                          <span className="text-xs text-cyan-400">
                             {file.name.split('.').pop()?.toUpperCase()}
                           </span>
                         </div>
@@ -379,7 +379,7 @@ export const AuditRequest = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-fuchsia-600 to-cyan-600 text-white py-4 rounded-lg font-semibold hover:from-fuchsia-700 hover:to-cyan-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-cyan-600 text-white py-4 rounded-lg font-semibold hover:bg-cyan-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>
@@ -406,7 +406,7 @@ export const AuditRequest = () => {
             </p>
             <a
               href="mailto:mickael.girondeau@gmail.com"
-              className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
+              className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               mickael.girondeau@gmail.com
             </a>

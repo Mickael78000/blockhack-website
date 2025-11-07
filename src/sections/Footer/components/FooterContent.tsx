@@ -5,7 +5,7 @@ export const FooterContent = () => {
   return (
     <div className="text-[15.1297px] items-start box-border caret-transparent gap-x-[52.954px] flex flex-wrap justify-between leading-[24.2075px] gap-y-[52.954px] md:text-[15.667px] md:gap-x-[47.0011px] md:leading-[25.0672px] md:gap-y-[47.0011px]">
       <div className="text-[15.1297px] box-border caret-transparent gap-x-[37.8243px] flex flex-col leading-[24.2075px] min-w-full gap-y-[37.8243px] pt-[30.2594px] md:text-[15.667px] md:gap-x-[11.5%] md:flex-row md:leading-[25.0672px] md:min-w-[65%] md:gap-y-[11.5%] md:pt-[31.334px]">
-        <FooterColumn
+        {/* <FooterColumn
           title={
             <>
               Besoin d'un audit de sécurité ?{" "}
@@ -13,10 +13,10 @@ export const FooterContent = () => {
               Faites-le nous savoir
             </>
           }
-          variant="contact"
-          contactButtonText="Contact"
-          contactButtonHref="#contact"
-        />
+          // variant="contact"
+          // contactButtonText="Contact"
+          // contactButtonHref="#contact"
+        /> */}
         <FooterColumn
           title="À propos"
           variant="links"
