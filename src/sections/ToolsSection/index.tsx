@@ -170,7 +170,7 @@ export const ToolsSection = () => {
             </div>
           </div>
           <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-left md:text-[15.667px] md:leading-[25.0672px] md:w-[60%]">
-            <h2 className="text-cyan-400 text-[28px] font-bold box-border caret-transparent leading-[36px] text-left mt-0 mb-[14px] md:text-[50.9178px] md:leading-[61.1014px] md:mt-0 md:mb-[19.5838px]">
+            <h2 className="text-cyan-400 text-[42px] font-bold box-border caret-transparent leading-[50.4px] text-left mt-0 mb-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:mt-0 md:mb-[19.5838px]">
               Des infrastructures robustes, exploitables et documentées.
             </h2>
             <TrustedByLogos />

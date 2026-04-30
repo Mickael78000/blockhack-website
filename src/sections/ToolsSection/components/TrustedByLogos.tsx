@@ -1,6 +1,6 @@
 export const TrustedByLogos = () => {
   return (
-    <div className="text-[15.1297px] items-center box-border caret-transparent gap-x-[22.6946px] grid auto-cols-[1fr] auto-rows-[28px] grid-cols-[1fr] grid-rows-[auto_auto] justify-items-center leading-[24.2075px] gap-y-[15.1297px] text-left mt-[45.3891px] mx-auto md:text-[15.667px] md:gap-x-[58.7513px] md:grid-cols-[1fr_1fr] md:justify-items-stretch md:leading-[25.0672px] md:gap-y-[15.667px] md:text-center md:mt-[58.7513px]">
+    <div className="text-[15.1297px] items-center box-border caret-transparent gap-x-[22.6946px] grid auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto_auto] justify-items-center leading-[24.2075px] gap-y-[15.1297px] text-left mt-[45.3891px] mx-auto md:text-[15.667px] md:gap-x-[58.7513px] md:grid-cols-[1fr_1fr] md:justify-items-stretch md:leading-[25.0672px] md:gap-y-[15.667px] md:text-center md:mt-[58.7513px]">
       <a
         href="https://www.ssi.gouv.fr/"
         target="_blank"
