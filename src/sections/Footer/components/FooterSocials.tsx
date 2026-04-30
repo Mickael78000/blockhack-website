@@ -68,7 +68,7 @@ export const FooterSocials = () => {
           <br className="text-[17.0209px] box-border caret-transparent leading-[27.2335px] md:text-[17.6254px] md:leading-[28.2006px]" />
           SIRET: 989 025 192 00018
           <br className="text-[17.0209px] box-border caret-transparent leading-[27.2335px] md:text-[17.6254px] md:leading-[28.2006px]" />
-          18 Rue de la Martinière
+          5 Allée de l'Étoile Royale
           <br className="text-[17.0209px] box-border caret-transparent leading-[27.2335px] md:text-[17.6254px] md:leading-[28.2006px]" />
           78000 Versailles
           <br className="text-[17.0209px] box-border caret-transparent leading-[27.2335px] md:text-[17.6254px] md:leading-[28.2006px]" />
