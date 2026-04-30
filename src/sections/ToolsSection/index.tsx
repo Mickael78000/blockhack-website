@@ -124,7 +124,7 @@ export const ToolsSection = () => {
         </div>
       <div className="relative z-10 text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <div className="relative text-[15.1297px] box-border caret-transparent flex flex-col gap-10 leading-[24.2075px] mt-[110px] mx-auto w-full max-w-[980px] px-[10px] md:text-[15.667px] md:leading-[25.0672px] md:mt-[235px] md:flex-row md:items-start md:gap-[51px] md:px-0">
-          <div ref={containerRef} className="w-full max-w-[300px] mx-auto md:max-w-[500px] md:w-[40%]">
+          <div ref={containerRef} className="hidden md:block w-full md:max-w-[500px] md:w-[40%]">
             <div className="relative overflow-hidden rounded-[24px] shadow-xl bg-gray-900">
               {shouldLoadVideo ? (
                 <>
@@ -170,7 +170,7 @@ export const ToolsSection = () => {
             </div>
           </div>
           <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-left md:text-[15.667px] md:leading-[25.0672px] md:w-[60%]">
-            <h2 className="text-cyan-400 text-[42px] font-bold box-border caret-transparent leading-[50.4px] text-left mt-0 mb-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:mt-0 md:mb-[19.5838px]">
+            <h2 className="text-cyan-400 text-[28px] font-bold box-border caret-transparent leading-[36px] text-left mt-0 mb-[14px] md:text-[50.9178px] md:leading-[61.1014px] md:mt-0 md:mb-[19.5838px]">
               Des infrastructures robustes, exploitables et documentées.
             </h2>
             <TrustedByLogos />

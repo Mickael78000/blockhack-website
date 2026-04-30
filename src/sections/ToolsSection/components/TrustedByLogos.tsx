@@ -5,7 +5,7 @@ export const TrustedByLogos = () => {
         href="https://www.ssi.gouv.fr/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[15.1297px] font-light items-center box-border caret-transparent flex h-[150px] justify-center leading-[24.2075px] max-w-full text-left md:text-[15.667px] md:h-[160px] md:leading-[25.0672px] md:text-center"
+        className="text-[15.1297px] font-light items-center box-border caret-transparent flex h-[80px] justify-center leading-[24.2075px] max-w-full text-left md:text-[15.667px] md:h-[160px] md:leading-[25.0672px] md:text-center"
       >
         <img
           src="/images/Anssi.png"
@@ -17,7 +17,7 @@ export const TrustedByLogos = () => {
         href="https://www.linuxfoundation.org/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[15.1297px] font-light items-center box-border caret-transparent flex h-[150px] justify-center leading-[24.2075px] max-w-full text-left md:text-[15.667px] md:h-[160px] md:leading-[25.0672px] md:text-center"
+        className="text-[15.1297px] font-light items-center box-border caret-transparent flex h-[80px] justify-center leading-[24.2075px] max-w-full text-left md:text-[15.667px] md:h-[160px] md:leading-[25.0672px] md:text-center"
       >
         <img
           src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/linuxfoundation.svg"
@@ -29,7 +29,7 @@ export const TrustedByLogos = () => {
         href="https://kubernetes.io/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[15.1297px] font-light items-center self-center box-border caret-transparent flex col-end-[span_1] col-start-[span_1] row-end-[span_1] row-start-[span_1] h-[150px] justify-center leading-[24.2075px] max-w-full text-left md:text-[15.667px] md:h-[160px] md:leading-[25.0672px] md:text-center"
+        className="text-[15.1297px] font-light items-center self-center box-border caret-transparent flex col-end-[span_1] col-start-[span_1] row-end-[span_1] row-start-[span_1] h-[80px] justify-center leading-[24.2075px] max-w-full text-left md:text-[15.667px] md:h-[160px] md:leading-[25.0672px] md:text-center"
       >
         <img
           src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/kubernetes.svg"
@@ -41,7 +41,7 @@ export const TrustedByLogos = () => {
         href="https://alyra.fr/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[15.1297px] font-light items-center box-border caret-transparent flex h-[150px] justify-center leading-[24.2075px] max-w-full text-left md:text-[15.667px] md:h-[160px] md:leading-[25.0672px] md:text-center"
+        className="text-[15.1297px] font-light items-center box-border caret-transparent flex h-[80px] justify-center leading-[24.2075px] max-w-full text-left md:text-[15.667px] md:h-[160px] md:leading-[25.0672px] md:text-center"
       >
         <img
           src="https://cdn.prod.website-files.com/638473041a643140c382a182/654a67231faa815a77025f94_logo_bleu%402000x%20Alyra.png"
