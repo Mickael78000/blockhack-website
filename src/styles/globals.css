@@ -1,3 +1,4 @@
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -149,8 +150,6 @@
   font-weight: 700;
   font-style: normal;
 }
-
-@tailwind base;
 
 @layer base {
   :root {

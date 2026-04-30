@@ -1,7 +1,9 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 import { TrustedByLogos } from "@/sections/ToolsSection/components/TrustedByLogos";
-import FloatingMathScreen from "@/components/floating_math_crypto_names_screen_react";
-import { AnimatedSection } from "@/components/AnimatedSection";
+import FloatingMathScreen from "@/shared/components/floating_math_crypto_names_screen_react";
+import { AnimatedSection } from "@/shared/components/AnimatedSection";
 
 export const ToolsSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -162,14 +164,14 @@ export const ToolsSection = () => {
                 </>
               ) : (
                 <div className="w-full h-full min-h-[300px] flex items-center justify-center bg-gray-900">
-                  <p className="text-cyan-400 text-lg">Loading video...</p>
+                  <p className="text-cyan-400 text-lg">Chargement...</p>
                 </div>
               )}
             </div>
           </div>
           <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-left md:text-[15.667px] md:leading-[25.0672px] md:w-[60%]">
-            <h2 className="text-cyan-400 text-[42px] font-bold box-border caret-transparent leading-[50.4px] text-left my-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:my-[19.5838px]">
-              La fiabilité au cœur de chaque lancement, pour un succès garanti.
+            <h2 className="text-cyan-400 text-[42px] font-bold box-border caret-transparent leading-[50.4px] text-left mt-0 mb-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:mt-0 md:mb-[19.5838px]">
+              Des infrastructures robustes, exploitables et documentées.
             </h2>
             <TrustedByLogos />
           </div>

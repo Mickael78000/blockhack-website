@@ -5,19 +5,19 @@ export const EducationSection = () => {
     <div className="relative text-[15.1297px] box-border caret-transparent leading-[24.2075px] bg-[position:0px_100%] pt-[30px] md:text-[15.667px] md:leading-[25.0672px] md:bg-left-top">
       <div className="relative text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] text-left w-full z-[5] ml-0 mr-auto mt-10 pt-[60px] pb-5 px-[25px] md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px] md:ml-auto before:accent-auto before:caret-transparent before:text-white/70 before:table before:text-[15.1297px] before:not-italic before:normal-nums before:font-medium before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[24.2075px] before:list-outside before:list-disc before:pointer-events-auto before:text-left before:indent-[0px] before:normal-case before:visible before:border-separate before:font-space_grotesk before:md:text-[15.667px] before:md:leading-[25.0672px] after:accent-auto after:caret-transparent after:clear-both after:text-white/70 after:table after:text-[15.1297px] after:not-italic after:normal-nums after:font-medium after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[24.2075px] after:list-outside after:list-disc after:pointer-events-auto after:text-left after:indent-[0px] after:normal-case after:visible after:border-separate after:font-space_grotesk after:md:text-[15.667px] after:md:leading-[25.0672px]">
         <h2 className="text-cyan-400 text-[42px] font-bold box-border caret-transparent leading-[50.4px] my-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:my-[19.5838px]">
-          Sensibiliser les développeurs du Web3 aux risques
+          Structurer une démarche DevSecOps pragmatique
         </h2>
-        <p className="text-[24.6946px] font-normal box-border caret-transparent leading-[30.3682px] max-w-[870px] w-full mb-2.5 text-justify md:text-[25.5005px] md:leading-[31.3757px] md:max-w-[900px]">
-          Les hackers évoluent constamment, vos compétences aussi doivent évoluer. 
+        <p className="text-[26px] font-normal box-border caret-transparent leading-[34px] max-w-[870px] w-full mb-2.5 text-center mx-auto md:text-[27px] md:leading-[36px] md:max-w-[900px]">
+          La sécurité ne s’ajoute pas en fin de projet : elle se construit à chaque étape du cycle de vie.
           <br /><br />
-          Chaque année, des milliards sont perdus à cause de vulnérabilités connues et évitables : 
-          attaques par réentrance, contrôles d'accès défaillants, manipulations d'oracles. 
+          Mettre en place un S-SDLC efficace suppose d’aligner les pratiques des équipes de développement,
+          d’exploitation et de maîtrise d’ouvrage sur des exigences de sécurité concrètes et mesurables.
           <br /><br />
-          En vous formant continuellement aux dernières techniques de sécurité, vous ne protégez pas 
-          seulement votre code, vous protégez l'avenir de la décentralisation. 
+          BlockHack.io accompagne vos équipes dans l’outillage, la documentation et la gouvernance
+          de cette démarche — de la définition des exigences jusqu’à l’intégration dans les pipelines CI/CD.
           <br /><br />
           <span className="block text-center w-full">
-            Devenez le rempart contre les exploits qui menacent l'écosystème Web3.
+            Security by design. Security by default. Documenté, exploitable, transmissible.
           </span>
         </p>
         {/* <div className="text-[15.1297px] box-border caret-transparent gap-x-[30.2594px] grid flex-col auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] leading-[24.2075px] max-w-[877.523px] gap-y-[30.2594px] w-full mt-[60.5188px] md:text-[15.667px] md:gap-x-[31.334px] md:flex-row md:grid-cols-[1fr_1fr] md:leading-[25.0672px] md:max-w-[908.687px] md:gap-y-[31.334px] md:mt-[54.8346px]">

@@ -1,9 +1,11 @@
+"use client";
+
 import { useState } from 'react';
 import { Navbar } from '@/sections/Navbar';
 import { Footer } from '@/sections/Footer';
 import { Send, Upload, X, CheckCircle, AlertCircle } from 'lucide-react';
 
-export const AuditRequest = () => {
+export const AuditRequestForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,20 +57,20 @@ export const AuditRequest = () => {
       });
 
       // Create mailto link as fallback
-      const mailtoSubject = encodeURIComponent(`Demande d'audit: ${formData.subject}`);
+      const mailtoSubject = encodeURIComponent(`Demande de prestation: ${formData.subject}`);
       const mailtoBody = encodeURIComponent(
         `Nom: ${formData.name}\n` +
         `Email: ${formData.email}\n` +
         `Entreprise: ${formData.company}\n` +
-        `Type de projet: ${formData.projectType}\n` +
-        `Blockchain: ${formData.blockchain}\n` +
+        `Type de prestation: ${formData.projectType}\n` +
+        `Contexte: ${formData.blockchain}\n` +
         `Urgence: ${formData.urgency}\n\n` +
         `Message:\n${formData.message}\n\n` +
         `Note: ${attachments.length} pièce(s) jointe(s)`
       );
 
       // Open mailto link
-      window.location.href = `mailto:mickael.girondeau@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+      window.location.href = `mailto:contact@blockhack.io?subject=${mailtoSubject}&body=${mailtoBody}`;
 
       setSubmitStatus('success');
       
@@ -109,10 +111,10 @@ export const AuditRequest = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Demander un <span className="text-cyan-400">Audit</span>
+              Soumettre une <span className="text-cyan-400">demande</span>
             </h1>
             <p className="text-gray-400 text-lg">
-              Remplissez le formulaire ci-dessous pour demander un audit de sécurité pour votre projet blockchain
+              Audit d’infrastructure, AMO, DevSecOps, réponse à appel d’offres — décrivez votre besoin et nous vous recontactons sous 48 h ouvrables.
             </p>
           </div>
 
@@ -171,12 +173,12 @@ export const AuditRequest = () => {
 
             {/* Project Details */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Détails du projet</h2>
+              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Nature de la prestation</h2>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Type de projet <span className="text-red-500">*</span>
+                    Type de prestation <span className="text-red-500">*</span>
                   </label>
                   <select
                     name="projectType"
@@ -192,20 +194,20 @@ export const AuditRequest = () => {
                     }}
                   >
                     <option value="" className="bg-gray-900 text-white">Sélectionner...</option>
-                    <option value="defi" className="bg-gray-900 text-white">DeFi Protocol</option>
-                    <option value="nft" className="bg-gray-900 text-white">NFT Platform</option>
-                    <option value="dao" className="bg-gray-900 text-white">DAO / Governance</option>
-                    <option value="dex" className="bg-gray-900 text-white">DEX / Trading</option>
-                    <option value="bridge" className="bg-gray-900 text-white">Bridge / Cross-chain</option>
-                    <option value="token" className="bg-gray-900 text-white">Token / Smart Contract</option>
-                    <option value="game" className="bg-gray-900 text-white">Gaming / Metaverse</option>
+                    <option value="architecture_reseau" className="bg-gray-900 text-white">Architecture réseau / télécoms</option>
+                    <option value="devsecops" className="bg-gray-900 text-white">DevSecOps / S-SDLC</option>
+                    <option value="amo" className="bg-gray-900 text-white">AMO — assistance à maîtrise d’ouvrage</option>
+                    <option value="marche_public" className="bg-gray-900 text-white">Réponse à appel d’offres / groupement</option>
+                    <option value="fibre_vrd" className="bg-gray-900 text-white">Fibre optique / VRD</option>
+                    <option value="audit_infra" className="bg-gray-900 text-white">Audit d’infrastructure numérique</option>
+                    <option value="iac" className="bg-gray-900 text-white">Infrastructure as Code / infogérance</option>
                     <option value="other" className="bg-gray-900 text-white">Autre</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Blockchain <span className="text-red-500">*</span>
+                    Contexte organisationnel <span className="text-red-500">*</span>
                   </label>
                   <select
                     name="blockchain"
@@ -221,15 +223,12 @@ export const AuditRequest = () => {
                     }}
                   >
                     <option value="" className="bg-gray-900 text-white">Sélectionner...</option>
-                    <option value="solana" className="bg-gray-900 text-white">Solana</option>
-                    <option value="ethereum" className="bg-gray-900 text-white">Ethereum</option>
-                    <option value="polygon" className="bg-gray-900 text-white">Polygon</option>
-                    <option value="arbitrum" className="bg-gray-900 text-white">Arbitrum</option>
-                    <option value="optimism" className="bg-gray-900 text-white">Optimism</option>
-                    <option value="starknet" className="bg-gray-900 text-white">StarkNet</option>
-                    <option value="scroll" className="bg-gray-900 text-white">Scroll</option>
-                    <option value="bsc" className="bg-gray-900 text-white">BSC</option>
-                    <option value="avalanche" className="bg-gray-900 text-white">Avalanche</option>
+                    <option value="collectivite" className="bg-gray-900 text-white">Collectivité territoriale</option>
+                    <option value="etablissement_public" className="bg-gray-900 text-white">Établissement public (éducation, santé, culture)</option>
+                    <option value="operateur" className="bg-gray-900 text-white">Opérateur public / parapublic</option>
+                    <option value="administration" className="bg-gray-900 text-white">Administration centrale ou décentralisée</option>
+                    <option value="entreprise_privee" className="bg-gray-900 text-white">Entreprise privée</option>
+                    <option value="ese" className="bg-gray-900 text-white">ESN / bureau d’études</option>
                     <option value="other" className="bg-gray-900 text-white">Autre</option>
                   </select>
                 </div>
@@ -251,10 +250,10 @@ export const AuditRequest = () => {
                     backgroundSize: '1.5em 1.5em'
                   }}
                 >
-                  <option value="low" className="bg-gray-900 text-white">Basse - Pas urgent</option>
-                  <option value="normal" className="bg-gray-900 text-white">Normale - 2-4 semaines</option>
-                  <option value="high" className="bg-gray-900 text-white">Haute - 1-2 semaines</option>
-                  <option value="urgent" className="bg-gray-900 text-white">Urgente - Moins d'une semaine</option>
+                  <option value="low" className="bg-gray-900 text-white">Basse — pas de contrainte calendaire</option>
+                  <option value="normal" className="bg-gray-900 text-white">Normale — délai standard (2–4 semaines)</option>
+                  <option value="high" className="bg-gray-900 text-white">Haute — date de remise d’offre proche</option>
+                  <option value="urgent" className="bg-gray-900 text-white">Urgente — moins d’une semaine</option>
                 </select>
               </div>
             </div>
@@ -274,7 +273,7 @@ export const AuditRequest = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors"
-                  placeholder="Audit de sécurité pour mon protocole DeFi"
+                  placeholder="Audit d’infrastructure réseau — campus universitaire 3 sites"
                 />
               </div>
 
@@ -289,10 +288,10 @@ export const AuditRequest = () => {
                   required
                   rows={8}
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors resize-none"
-                  placeholder="Décrivez votre projet, vos besoins en matière d'audit, et toute information pertinente..."
+                  placeholder="Décrivez votre contexte, vos contraintes techniques et organisationnelles, le calendrier prévisionnel et toute référence documentaire disponible..."
                 />
                 <p className="text-sm text-gray-400 mt-2">
-                  Incluez des détails sur votre projet, le code source, la documentation, et vos préoccupations en matière de sécurité.
+                  Joignez si possible le cahier des charges, le CCTP, un schéma réseau ou tout document d’architecture utile à la qualification de la demande.
                 </p>
               </div>
             </div>
@@ -309,7 +308,7 @@ export const AuditRequest = () => {
                       Cliquez pour ajouter des fichiers
                     </p>
                     <p className="text-xs text-gray-500 mt-1">
-                      Documentation, whitepaper, code source, etc.
+                      Cahier des charges, CCTP, schéma réseau, maquette, documentation technique…
                     </p>
                   </div>
                   <input
@@ -361,7 +360,7 @@ export const AuditRequest = () => {
               <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <p className="text-green-400">
-                  Votre demande a été envoyée avec succès ! Nous vous répondrons dans les plus brefs délais.
+                  Votre demande a été transmise. Nous vous recontactons sous 48 h ouvrables.
                 </p>
               </div>
             )}
@@ -370,7 +369,7 @@ export const AuditRequest = () => {
               <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
                 <AlertCircle className="w-5 h-5 text-red-400" />
                 <p className="text-red-400">
-                  Une erreur s'est produite. Veuillez réessayer ou nous contacter directement à mickael.girondeau@gmail.com
+                  Une erreur s’est produite lors de l’envoi. Veuillez réessayer ou nous écrire directement à contact@blockhack.io.
                 </p>
               </div>
             )}
@@ -395,20 +394,20 @@ export const AuditRequest = () => {
             </button>
 
             <p className="text-sm text-gray-400 text-center mt-4">
-              En soumettant ce formulaire, vous acceptez que nous utilisions vos informations pour traiter votre demande d'audit.
+              Les informations transmises sont utilisées exclusivement pour traiter votre demande. Elles ne font l’objet d’aucune cession ni d’utilisation commerciale.
             </p>
           </form>
 
           {/* Contact Info */}
           <div className="mt-12 text-center">
             <p className="text-gray-400 mb-2">
-              Vous préférez nous contacter directement ?
+              Vous préférez un échange direct ?
             </p>
             <a
-              href="mailto:mickael.girondeau@gmail.com"
+              href="mailto:contact@blockhack.io"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
-              mickael.girondeau@gmail.com
+              contact@blockhack.io
             </a>
           </div>
         </div>

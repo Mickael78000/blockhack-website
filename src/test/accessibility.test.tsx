@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { axe } from 'vitest-axe';
-import { AnimatedSection } from '@/components/AnimatedSection';
-import { GridPattern } from '@/components/GridPattern';
+import { AnimatedSection } from '@/shared/components/AnimatedSection';
+import { GridPattern } from '@/shared/components/GridPattern';
 
 describe('Accessibility Tests', () => {
   describe('AnimatedSection', () => {

@@ -6,7 +6,7 @@ export const NavbarLogo = () => {
     >
       <img
         src="/images/blockhack-brand.svg"
-        alt="BlockHack Blockchain Audit Logo"
+        alt="BlockHack.io – Ingénierie infrastructure numérique, réseaux et DevSecOps"
         className="w-[350px] h-[120px] md:w-[350px] md:h-[110px] object-cover object-center"
       />
     </a>

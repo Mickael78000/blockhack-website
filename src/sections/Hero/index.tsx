@@ -1,3 +1,5 @@
+"use client";
+
 import { HeroContent } from "@/sections/Hero/components/HeroContent";
 //import { ClientLogos } from "@/sections/Hero/components/ClientLogos";
 import { motion } from "framer-motion";

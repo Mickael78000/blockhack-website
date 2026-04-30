@@ -21,8 +21,8 @@ export const FooterContent = () => {
           title="À propos"
           variant="links"
           links={[
-            { text: "Services", href: "#services" },
-            { text: "Audits", href: "#audits" },
+            { text: "Prestations", href: "#services" },
+            { text: "AMO & Marchés publics", href: "#audits" },
             // {
             //   text: "Carrière",
             //   href: "https://ackeeblockchain.recruitee.com/",
@@ -31,17 +31,17 @@ export const FooterContent = () => {
           ]}
         />
         <FooterColumn
-          title="Outils"
+          title="Ressources"
           variant="links"
           links={[
             {
-              text: "Foundry",
-              href: "https://getfoundry.sh/",
+              text: "Documentation ANSSI",
+              href: "https://www.ssi.gouv.fr/",
               hasExternalIcon: true,
             },
             {
-              text: "Solidity",
-              href: "#solidity-extension",
+              text: "Références techniques",
+              href: "#audits",
             },
           ]}
         />

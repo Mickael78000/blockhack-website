@@ -75,11 +75,11 @@ export const FooterSocials = () => {
           France
         </p>
         <a
-          href="mailto:hello@example.com"
+          href="mailto:contact@blockhack.io"
           className="text-white/70 text-[17.0209px] font-normal items-center box-border caret-transparent gap-x-[5.67364px] flex shrink-0 justify-start leading-[27.2335px] max-w-full gap-y-[5.67364px] underline text-nowrap pr-[3.78243px] md:text-[17.6254px] md:gap-x-[5.87513px] md:leading-[28.2006px] md:gap-y-[5.87513px] md:pr-[3.91675px] hover:text-cyan-400 hover:border-cyan-400"
         >
           <div className="text-[17.0209px] box-border caret-transparent leading-[27.2335px] text-nowrap md:text-[17.6254px] md:leading-[28.2006px]">
-            hello@example.com
+            contact@blockhack.io
           </div>
         </a>
       </div>
@@ -89,7 +89,7 @@ export const FooterSocials = () => {
           className="text-[15.1297px] font-normal items-center box-border caret-transparent gap-x-[5.67364px] flex shrink-0 justify-start leading-[24.2075px] max-w-full gap-y-[5.67364px] underline text-nowrap pr-[3.78243px] md:text-[15.667px] md:gap-x-[5.87513px] md:leading-[25.0672px] md:gap-y-[5.87513px] md:pr-[3.91675px] hover:text-cyan-400 hover:border-cyan-400"
         >
           <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-nowrap md:text-[15.667px] md:leading-[25.0672px]">
-            Brand Kit
+            Kit marque
           </div>
         </a>
         <div className="text-[22.6946px] box-border caret-transparent leading-[28.3682px] md:text-[23.5005px] md:leading-[29.3757px]">

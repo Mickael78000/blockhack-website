@@ -1,3 +1,5 @@
+"use client";
+
 export type CarouselNavigationProps = {
   variant: "previous" | "next" | "dots";
   ariaLabel?: string;
