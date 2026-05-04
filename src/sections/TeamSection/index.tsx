@@ -16,7 +16,7 @@ export const TeamSection = () => {
           En 2025, j'ai engagé une reconversion structurée vers les métiers de l'informatique, en consolidant mes compétences en développement, en réseaux distribués et en architecture technique. Cette montée en compétence a été validée par la certification Alyra RS6515, qui atteste d'un socle technique solide en développement d'applications décentralisées, avec des compétences en conception, développement, tests et déploiement sur blockchain. Aujourd'hui, je souhaite mettre cette double culture projet et technique au service de missions de gestion de projet, d'infogérance, de DevOps et d'infrastructure réseaux, avec une capacité éprouvée à structurer l'action, sécuriser l'exécution et accompagner des projets dans des environnements complexes et évolutifs.
         </p>
         <div className="text-[15.1297px] content-center items-center box-border caret-transparent gap-x-[15.1297px] flex flex-col auto-cols-[1fr] [grid-template-areas:'._._Area'] grid-cols-[1fr] grid-rows-[auto] justify-items-center justify-center leading-[24.2075px] gap-y-[30.2594px] mt-[15.1297px] w-full md:text-[15.667px] md:gap-x-[31.334px] md:flex md:flex-row md:leading-[25.0672px] md:gap-y-[31.334px] md:mt-[58.7513px]">
-          <div className="flex justify-center w-1/2">
+          <div className="flex justify-center w-full px-4 md:w-1/2 md:px-0">
             <AnimatedSection delay={0.1} direction="up">
               <TeamMemberCard
               imageUrl="/images/founder.webp"
