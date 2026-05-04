@@ -16,6 +16,16 @@
   50% { transform: translateY(-30px) translateX(10px); opacity: 0.8; }
 }
 
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes lightBeam {
+  0%, 100% { opacity: 0; transform: scaleY(0.5); }
+  50% { opacity: 0.5; transform: scaleY(1); }
+}
+
 @font-face {
   /* This font could not be included automatically because of legal reasons. Please add it manually or switch to another font */
   font-family: 'webflow-icons';

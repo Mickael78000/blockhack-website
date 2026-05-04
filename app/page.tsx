@@ -1,6 +1,4 @@
-"use client";
-
-import { motion, useScroll, useSpring } from "framer-motion";
+import { ScrollProgressBar } from "@/shared/components/ScrollProgressBar";
 import { Navbar } from "@/sections/Navbar";
 import { Hero } from "@/sections/Hero";
 // import { CaseStudiesCarousel } from "@/sections/CaseStudiesCarousel";
@@ -16,19 +14,9 @@ import { TeamSection } from "@/sections/TeamSection";
 import { Footer } from "@/sections/Footer";
 
 export default function HomePage() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   return (
     <div className="text-white/70 text-[15.1297px] not-italic normal-nums font-medium accent-auto bg-black box-border caret-transparent block tracking-[normal] leading-[24.2075px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-space_grotesk md:text-[15.667px] md:leading-[25.0672px] relative overflow-x-hidden">
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-fuchsia-500 origin-left z-[9999]"
-        style={{ scaleX }}
-      />
+      <ScrollProgressBar />
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* Neon Glows */}
         <div className="absolute w-[400px] h-[400px] rounded-full bg-cyan-500/20 blur-[120px] -top-20 -left-20 animate-pulse"></div>
