@@ -22,7 +22,7 @@ export const ServiceCard = (props: ServiceCardProps) => {
               className="text-[15.1297px] box-border caret-transparent inline-block h-full leading-[24.2075px] max-w-full object-contain md:text-[15.667px] md:leading-[25.0672px]"
             />
           </div>
-          <h3 className="text-white text-[28px] font-semibold box-border caret-transparent leading-[34px] mt-0 mb-6 md:text-[30px] md:leading-[36px]">
+          <h3 className="text-white text-[28px] font-semibold font-space_grotesk box-border caret-transparent leading-[34px] mt-0 mb-6 md:text-[30px] md:leading-[36px]">
             {props.title}
           </h3>
           {props.hasDecorations ? (

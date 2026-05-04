@@ -14,7 +14,7 @@ export const StatCard = (props: StatCardProps) => {
         <div className="absolute text-[15.1297px] backdrop-blur-[13px] bg-black/50 box-border caret-transparent leading-[24.2075px] z-[1] inset-[0%] md:text-[15.667px] md:leading-[25.0672px]"></div>
         <div className="relative text-[15.1297px] bg-stone-950 box-border caret-transparent h-full leading-[24.2075px] text-left z-[2] border border-zinc-800 px-[22.6946px] py-[20px] rounded-bl rounded-br rounded-tl rounded-tr border-solid md:text-[15.667px] md:leading-[25.0672px] md:pt-[24px] md:pb-[24px] md:px-[47.0011px]">
           <div className="text-[15.1297px] items-start box-border caret-transparent gap-x-[15.1297px] grid flex-col auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto_auto] h-full leading-[24.2075px] gap-y-0 md:text-[15.667px] md:gap-x-[15.667px] md:grid-rows-[auto_auto] md:leading-[25.0672px]">
-            <h3 className="text-white text-[28px] font-semibold box-border caret-transparent leading-[34px] mt-0 mb-6 md:text-[30px] md:leading-[36px]">
+            <h3 className="text-white text-[28px] font-semibold font-space_grotesk box-border caret-transparent leading-[34px] mt-0 mb-6 md:text-[30px] md:leading-[36px]">
               {props.title}
             </h3>
             <p className="text-[17px] font-normal box-border caret-transparent leading-[28px] mb-0 text-left md:text-[18px] md:leading-[30px]">

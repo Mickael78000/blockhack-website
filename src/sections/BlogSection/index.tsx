@@ -6,7 +6,7 @@ export const BlogSection = () => {
       <div className="relative text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] text-left w-full z-[5] ml-0 mr-auto mt-10 pt-[60px] pb-5 px-[25px] md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px] md:ml-auto">
         <div className="text-[15.1297px] box-border caret-transparent gap-x-[60.5188px] grid auto-cols-[1fr] grid-cols-[1fr] grid-rows-[auto] leading-[24.2075px] gap-y-0 md:text-[15.667px] md:gap-x-[62.6681px] md:grid-cols-[1fr_2fr] md:leading-[25.0672px] md:gap-y-[31.334px]">
           <div className="text-[15.1297px] items-start bg-[url('https://cdn.prod.website-files.com/6621233fd44f04553ba73645/6621233fd44f04553ba7379a_Wormhole.webp')] bg-no-repeat bg-cover box-border caret-transparent flex flex-col col-end-[span_1] col-start-[span_1] row-end-[span_1] row-start-[span_1] justify-start leading-[24.2075px] bg-center pt-[22.6946px] pb-[30.2594px] px-[22.6946px] md:text-[15.667px] md:leading-[25.0672px] md:p-[47.0011px]">
-            <h2 className="text-white text-[37.8243px] font-semibold box-border caret-transparent leading-[48.631px] uppercase my-[18.9121px] md:text-[47.0011px] md:leading-[60.4297px] md:my-[19.5838px]">
+            <h2 className="text-white text-[42px] font-bold font-space_grotesk box-border caret-transparent leading-[50.4px] uppercase my-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:my-[19.5838px]">
               Apprendre la blockchain
             </h2>
             <a

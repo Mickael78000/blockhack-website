@@ -37,44 +37,30 @@ export const AuditRequestForm = () => {
     setAttachments(prev => prev.filter((_, i) => i !== index));
   };
 
+  const [errorMessage, setErrorMessage] = useState<string>('');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setErrorMessage('');
 
     try {
-      // Create FormData for file upload
-      const formDataToSend = new FormData();
-      
-      // Add form fields
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataToSend.append(key, value);
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
 
-      // Add attachments
-      attachments.forEach((file, index) => {
-        formDataToSend.append(`attachment_${index}`, file);
-      });
+      const data = await res.json();
 
-      // Create mailto link as fallback
-      const mailtoSubject = encodeURIComponent(`Demande de prestation: ${formData.subject}`);
-      const mailtoBody = encodeURIComponent(
-        `Nom: ${formData.name}\n` +
-        `Email: ${formData.email}\n` +
-        `Entreprise: ${formData.company}\n` +
-        `Type de prestation: ${formData.projectType}\n` +
-        `Contexte: ${formData.blockchain}\n` +
-        `Urgence: ${formData.urgency}\n\n` +
-        `Message:\n${formData.message}\n\n` +
-        `Note: ${attachments.length} pièce(s) jointe(s)`
-      );
-
-      // Open mailto link
-      window.location.href = `mailto:contact@blockhack.io?subject=${mailtoSubject}&body=${mailtoBody}`;
+      if (!res.ok) {
+        setErrorMessage(data.error ?? 'Une erreur est survenue lors de l\'envoi.');
+        setSubmitStatus('error');
+        return;
+      }
 
       setSubmitStatus('success');
-      
-      // Reset form after 3 seconds
       setTimeout(() => {
         setFormData({
           name: '',
@@ -90,8 +76,8 @@ export const AuditRequestForm = () => {
         setSubmitStatus('idle');
       }, 3000);
 
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } catch {
+      setErrorMessage('Impossible de joindre le serveur. Vérifiez votre connexion ou écrivez à contact@blockhack.io.');
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -369,7 +355,7 @@ export const AuditRequestForm = () => {
               <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
                 <AlertCircle className="w-5 h-5 text-red-400" />
                 <p className="text-red-400">
-                  Une erreur s’est produite lors de l’envoi. Veuillez réessayer ou nous écrire directement à contact@blockhack.io.
+                  {errorMessage || 'Une erreur s\'est produite lors de l\'envoi. Veuillez réessayer ou nous écrire directement à contact@blockhack.io.'}
                 </p>
               </div>
             )}
@@ -394,7 +380,11 @@ export const AuditRequestForm = () => {
             </button>
 
             <p className="text-sm text-gray-400 text-center mt-4">
-              Les informations transmises sont utilisées exclusivement pour traiter votre demande. Elles ne font l’objet d’aucune cession ni d’utilisation commerciale.
+              Les informations recueillies via ce formulaire sont utilisées uniquement pour traiter votre demande (base légale : mesures précontractuelles, art. 6.1.b RGPD). Les champs obligatoires sont nécessaires au traitement. Vos données sont conservées 12 mois maximum et ne sont ni cédées ni utilisées à des fins commerciales. Vous disposez de droits d'accès, de rectification, d'effacement et d'opposition, exercables à{" "}
+              <a href="mailto:contact@blockhack.io" className="text-cyan-400 hover:text-cyan-300 transition-colors">contact@blockhack.io</a>.
+              Vous pouvez également introduire une réclamation auprès de la{" "}
+              <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors">CNIL</a>.{" "}
+              <a href="/politique-confidentialite" className="text-cyan-400 hover:text-cyan-300 transition-colors">Politique de confidentialité</a>.
             </p>
           </form>
 
@@ -407,7 +397,7 @@ export const AuditRequestForm = () => {
               href="mailto:contact@blockhack.io"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
-              contact@blockhack.io
+              06 26 33 68 10
             </a>
           </div>
         </div>

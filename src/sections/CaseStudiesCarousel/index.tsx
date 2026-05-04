@@ -61,7 +61,7 @@ export const CaseStudiesCarousel = () => {
                 </span>
               ))}
             </div>
-            <h1 className="text-white text-5xl md:text-7xl font-bold leading-[1.2] my-6 md:my-8">
+            <h1 className="text-white text-5xl md:text-7xl font-bold font-space_grotesk leading-[1.2] my-6 md:my-8">
               Architecture réseau multi-sites
             </h1>
             <p className="text-[22px] md:text-[24px] font-normal leading-[1.6] text-left max-w-full md:max-w-[740px] mb-6 whitespace-normal">
@@ -99,7 +99,7 @@ export const CaseStudiesCarousel = () => {
                 </span>
               ))}
             </div>
-            <h1 className="text-white text-5xl md:text-7xl font-bold leading-[1.2] my-6 md:my-8">
+            <h1 className="text-white text-5xl md:text-7xl font-bold font-space_grotesk leading-[1.2] my-6 md:my-8">
               Démarche DevSecOps pour un établissement public de santé
             </h1>
             <p className="text-[22px] md:text-[24px] font-normal leading-[1.6] text-left max-w-full md:max-w-[740px] mb-6 whitespace-normal">
@@ -139,7 +139,7 @@ export const CaseStudiesCarousel = () => {
                 </span>
               ))}
             </div>
-            <h1 className="text-white text-5xl md:text-7xl font-bold leading-[1.2] my-6 md:my-8">
+            <h1 className="text-white text-5xl md:text-7xl font-bold font-space_grotesk leading-[1.2] my-6 md:my-8">
               Déploiement fibre et VRD en groupement d'entreprises
             </h1>
             <p className="text-[22px] md:text-[24px] font-normal leading-[1.6] text-left max-w-full md:max-w-[740px] mb-6 whitespace-normal">
@@ -178,7 +178,7 @@ export const CaseStudiesCarousel = () => {
                 </span>
               ))}
             </div>
-            <h1 className="text-white text-5xl md:text-7xl font-bold leading-[1.2] my-6 md:my-8">
+            <h1 className="text-white text-5xl md:text-7xl font-bold font-space_grotesk leading-[1.2] my-6 md:my-8">
               Infrastructure VPN et supervision pour un opérateur public
             </h1>
             <p className="text-[22px] md:text-[24px] font-normal leading-[1.6] text-left max-w-full md:max-w-[740px] mb-6 whitespace-normal">
@@ -217,7 +217,7 @@ export const CaseStudiesCarousel = () => {
                 </span>
               ))}
             </div>
-            <h1 className="text-white text-5xl md:text-7xl font-bold leading-[1.2] my-6 md:my-8">
+            <h1 className="text-white text-5xl md:text-7xl font-bold font-space_grotesk leading-[1.2] my-6 md:my-8">
               Infogérance sécurisée et Infrastructure as Code
             </h1>
             <p className="text-[22px] md:text-[24px] font-normal leading-[1.6] text-left max-w-full md:max-w-[740px] mb-6 whitespace-normal">

@@ -28,15 +28,20 @@ export const FooterSocials = () => {
         </a>
         
         <a
-          href="https://twitter.com/helloMichka"
+          href="https://www.linkedin.com/in/mickaël-girondeau-773a6171"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-white text-[15.1297px] font-light box-border caret-transparent block leading-[24.2075px] max-w-full md:text-[15.667px] md:leading-[25.0672px] hover:text-fuchsia-500 hover:border-fuchsia-500"
         >
-          <div className="text-[15.1297px] items-center box-border caret-transparent flex h-[34.0418px] justify-center leading-[24.2075px] w-[34.0418px] md:text-[15.667px] md:h-[35.2508px] md:leading-[25.0672px] md:w-[35.2508px] before:accent-auto before:caret-transparent before:text-white before:table before:text-[15.1297px] before:not-italic before:normal-nums before:font-light before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[24.2075px] before:list-outside before:list-disc before:pointer-events-auto before:text-left before:indent-[0px] before:normal-case before:visible before:border-separate before:font-space_grotesk before:md:text-[15.667px] before:md:leading-[25.0672px] after:accent-auto after:caret-transparent after:clear-both after:text-white after:table after:text-[15.1297px] after:not-italic after:normal-nums after:font-light after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[24.2075px] after:list-outside after:list-disc after:pointer-events-auto after:text-left after:indent-[0px] after:normal-case after:visible after:border-separate after:font-space_grotesk after:md:text-[15.667px] after:md:leading-[25.0672px]">
-            <img
-              src="https://c.animaapp.com/mhjqsyis9DbJQx/assets/icon-7.svg"
-              alt="Icon"
-              className="text-[15.1297px] box-border caret-transparent h-full leading-[24.2075px] w-full md:text-[15.667px] md:leading-[25.0672px]"
-            />
+          <div className="text-[15.1297px] items-center box-border caret-transparent flex h-[34.0418px] justify-center leading-[24.2075px] w-[34.0418px] md:text-[15.667px] md:h-[35.2508px] md:leading-[25.0672px] md:w-[35.2508px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-full w-full"
+            >
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
           </div>
         </a>
         {/* <a

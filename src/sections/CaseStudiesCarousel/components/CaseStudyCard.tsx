@@ -32,7 +32,7 @@ export const CaseStudyCard = (props: CaseStudyCardProps) => {
           ))}
         </div>
       </div>
-      <h1 className="text-white text-[52.954px] font-bold box-border caret-transparent leading-[52.954px] my-[18.9121px] md:text-[70.5016px] md:leading-[84.6019px] md:my-[19.5838px]">
+      <h1 className="text-white text-[52.954px] font-bold font-space_grotesk box-border caret-transparent leading-[52.954px] my-[18.9121px] md:text-[70.5016px] md:leading-[84.6019px] md:my-[19.5838px]">
         {props.title}
       </h1>
       <p className="text-[21.7565px] font-normal box-border caret-transparent leading-[34.8104px] max-w-[714.879px] text-left w-full mb-2.5 md:text-[22.5292px] md:leading-[36.0467px] md:max-w-[740.267px]">

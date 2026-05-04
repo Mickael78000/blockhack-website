@@ -3,6 +3,7 @@ export type TeamMemberCardProps = {
   imageAlt: string;
   name: string;
   title: string;
+  subtitle?: string;
 };
 
 export const TeamMemberCard = (props: TeamMemberCardProps) => {
@@ -22,12 +23,17 @@ export const TeamMemberCard = (props: TeamMemberCardProps) => {
               backdropFilter: 'blur(8px)'
             }}></div>
           </div>
-          <h3 className="text-white text-[30.2594px] box-border caret-transparent leading-[34.0418px] my-5 md:text-[31.334px] md:leading-[35.2508px]">
+          <h3 className="text-white text-[30.2594px] font-semibold font-space_grotesk box-border caret-transparent leading-[34.0418px] my-5 md:text-[31.334px] md:leading-[35.2508px]">
             {props.name}
           </h3>
-          <h4 className="text-xl font-normal box-border caret-transparent leading-[26px] mt-2.5 mb-5 md:text-[22.5292px] md:leading-[29.2879px]">
+          <h4 className="text-xl font-medium box-border caret-transparent leading-[26px] mt-2.5 mb-5 md:text-[22.5292px] md:leading-[29.2879px]">
             {props.title}
           </h4>
+          {props.subtitle && (
+            <p className="text-sm text-white/60 box-border caret-transparent leading-[20px] mb-4">
+              {props.subtitle}
+            </p>
+          )}
           <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] pt-2.5 md:text-[15.667px] md:leading-[25.0672px]"></div>
         </div>
         <div className="absolute text-[15.1297px] backdrop-blur-[13px] bg-black/50 box-border caret-transparent leading-[24.2075px] z-[1] inset-[0%] md:text-[15.667px] md:leading-[25.0672px]"></div>

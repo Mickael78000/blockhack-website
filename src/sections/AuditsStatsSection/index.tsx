@@ -6,12 +6,12 @@ export const AuditsStatsSection = () => {
     <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-center pb-[20px] md:text-[15.667px] md:leading-[25.0672px] md:pb-[20px]">
       <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <AnimatedSection direction="left">
-          <h2 className="text-cyan-400 text-[42px] font-bold box-border caret-transparent leading-[50.4px] text-left my-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:my-[19.5838px]">
+          <h2 className="text-cyan-400 text-[42px] font-bold font-space_grotesk box-border caret-transparent leading-[50.4px] text-left my-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:my-[19.5838px]">
           Principaux risques de l’infrastructure numérique publique
         </h2>
         </AnimatedSection>
         <AnimatedSection delay={0.1} direction="left">
-          <p className="text-[23.7565px] font-normal box-border caret-transparent leading-[36.8104px] max-w-[714.879px] text-left text-justify w-full mb-[15.1297px] md:text-[24.5292px] md:leading-[38.0467px] md:max-w-[740.267px] md:mb-[62.6681px]">
+          <p className="text-[18px] font-normal box-border caret-transparent leading-[28px] text-left text-justify w-full mb-[15.1297px] md:text-[19px] md:leading-[30px] md:mb-[62.6681px]">
           La maturité d’une infrastructure numérique se mesure à sa capacité à absorber les incidents, à résister aux attaques et à garantir la continuité de service. Voici les trois catégories de risques les plus fréquemment observées dans les projets d’infrastructure publique.
           <br className="text-[23.7565px] box-border caret-transparent leading-[36.8104px] md:text-[24.5292px] md:leading-[38.0467px]" />
         </p>
