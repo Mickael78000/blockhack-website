@@ -17,7 +17,7 @@ export const TeamSection = () => {
         </p>
         <div className="text-[15.1297px] content-center items-center box-border caret-transparent gap-x-[15.1297px] flex flex-col auto-cols-[1fr] [grid-template-areas:'._._Area'] grid-cols-[1fr] grid-rows-[auto] justify-items-center justify-center leading-[24.2075px] gap-y-[30.2594px] mt-[15.1297px] w-full md:text-[15.667px] md:gap-x-[31.334px] md:flex md:flex-row md:leading-[25.0672px] md:gap-y-[31.334px] md:mt-[58.7513px]">
           <div className="flex justify-center w-full px-4 md:w-1/2 md:px-0">
-            <AnimatedSection delay={0.1} direction="up">
+            <AnimatedSection delay={0.1} direction="up" className="w-full">
               <TeamMemberCard
               imageUrl="/images/founder.webp"
               imageAlt="picture of mickael girondeau"
