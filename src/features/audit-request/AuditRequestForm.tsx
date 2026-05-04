@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Navbar } from '@/sections/Navbar';
 import { Footer } from '@/sections/Footer';
-import { Send, Upload, X, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 export const AuditRequestForm = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +17,6 @@ export const AuditRequestForm = () => {
     urgency: 'normal'
   });
 
-  const [attachments, setAttachments] = useState<File[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -26,16 +25,6 @@ export const AuditRequestForm = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const newFiles = Array.from(e.target.files);
-      setAttachments(prev => [...prev, ...newFiles]);
-    }
-  };
-
-  const removeAttachment = (index: number) => {
-    setAttachments(prev => prev.filter((_, i) => i !== index));
-  };
 
   const [errorMessage, setErrorMessage] = useState<string>('');
 
@@ -72,7 +61,6 @@ export const AuditRequestForm = () => {
           blockchain: '',
           urgency: 'normal'
         });
-        setAttachments([]);
         setSubmitStatus('idle');
       }, 3000);
 
@@ -277,69 +265,12 @@ export const AuditRequestForm = () => {
                   placeholder="Décrivez votre contexte, vos contraintes techniques et organisationnelles, le calendrier prévisionnel et toute référence documentaire disponible..."
                 />
                 <p className="text-sm text-gray-400 mt-2">
-                  Joignez si possible le cahier des charges, le CCTP, un schéma réseau ou tout document d’architecture utile à la qualification de la demande.
+                  Pour joindre un cahier des charges, un CCTP ou un schéma réseau, envoyez-les directement à{" "}
+                  <a href="mailto:contact@blockhack.io" className="text-cyan-400 hover:text-cyan-300 transition-colors">contact@blockhack.io</a> en réponse à notre accusé de réception.
                 </p>
               </div>
             </div>
 
-            {/* Attachments */}
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Pièces jointes</h2>
-              
-              <div className="mb-4">
-                <label className="flex items-center justify-center w-full px-4 py-6 bg-white/5 border-2 border-dashed border-white/20 rounded-lg cursor-pointer hover:bg-white/10 hover:border-cyan-400/50 transition-all">
-                  <div className="text-center">
-                    <Upload className="w-8 h-8 mx-auto mb-2 text-cyan-400" />
-                    <p className="text-sm text-gray-400">
-                      Cliquez pour ajouter des fichiers
-                    </p>
-                    <p className="text-xs text-gray-500 mt-1">
-                      Cahier des charges, CCTP, schéma réseau, maquette, documentation technique…
-                    </p>
-                  </div>
-                  <input
-                    type="file"
-                    multiple
-                    onChange={handleFileChange}
-                    className="hidden"
-                    accept=".pdf,.doc,.docx,.txt,.sol,.rs,.js,.ts,.md"
-                  />
-                </label>
-              </div>
-
-              {/* Attachment List */}
-              {attachments.length > 0 && (
-                <div className="space-y-2">
-                  {attachments.map((file, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center justify-between px-4 py-3 bg-white/5 border border-white/10 rounded-lg"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded bg-cyan-400/20 flex items-center justify-center">
-                          <span className="text-xs text-cyan-400">
-                            {file.name.split('.').pop()?.toUpperCase()}
-                          </span>
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium">{file.name}</p>
-                          <p className="text-xs text-gray-400">
-                            {(file.size / 1024).toFixed(2)} KB
-                          </p>
-                        </div>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() => removeAttachment(index)}
-                        className="p-2 hover:bg-red-500/20 rounded-lg transition-colors"
-                      >
-                        <X className="w-4 h-4 text-red-400" />
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
 
             {/* Submit Status */}
             {submitStatus === 'success' && (
