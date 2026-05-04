@@ -8,7 +8,7 @@ export const TrustedByLogos = () => {
         className="text-[15.1297px] font-light items-center box-border caret-transparent flex h-[80px] justify-center leading-[24.2075px] max-w-full text-left md:text-[15.667px] md:h-[160px] md:leading-[25.0672px] md:text-center"
       >
         <img
-          src="/images/Anssi.png"
+          src="/images/Anssi.webp"
           alt="ANSSI"
           className="text-[15.1297px] box-border caret-transparent h-full leading-[24.2075px] max-w-full object-contain text-left md:text-[15.667px] md:leading-[25.0672px] md:text-center"
         />

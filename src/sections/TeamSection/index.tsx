@@ -19,7 +19,7 @@ export const TeamSection = () => {
           <div className="flex justify-center w-1/2">
             <AnimatedSection delay={0.1} direction="up">
               <TeamMemberCard
-              imageUrl="/images/founder.JPG"
+              imageUrl="/images/founder.webp"
               imageAlt="picture of mickael girondeau"
               name="Mickaël Girondeau"
               title="Ingénieur DevOps spécialisé en Blockchain Assistance à maîtrise d'ouvrage pour l'infrastructure numérique publique"
