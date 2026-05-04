@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "BlockHack.io — Ingénierie infrastructure numérique, réseaux et DevSecOps",
   description:
     "BlockHack.io est un prestataire d'ingénierie et d'AMO spécialisé en infrastructure numérique, réseaux, télécoms, fibre optique et DevSecOps. Intervention en marchés publics, groupement d'entreprises et assistance à maîtrise d'ouvrage. Implanté en Île-de-France.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+  },
   other: {
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
