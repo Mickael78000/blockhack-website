@@ -2,10 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 const urgencyLabels: Record<string, string> = {
-  low: "Basse — pas de contrainte calendaire",
-  normal: "Normale — délai standard (2–4 semaines)",
-  high: "Haute — date de remise d'offre proche",
-  urgent: "Urgente — moins d'une semaine",
+  low: "Pas pressé — pas de contrainte de calendrier",
+  normal: "Délai normal",
+  high: "Assez urgent",
+  urgent: "Très urgent — moins d'une semaine",
 };
 
 export async function POST(req: NextRequest) {
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     if (!subject) missing.push("objet");
     if (!message) missing.push("message");
     if (!projectType) missing.push("type de prestation");
-    if (!blockchain) missing.push("contexte organisationnel");
+    if (!blockchain) missing.push("votre profil (particulier, indépendant…)");
 
     if (missing.length > 0) {
       return NextResponse.json(
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
         `Email : ${email}`,
         `Entreprise : ${company || "—"}`,
         `Type de prestation : ${projectType}`,
-        `Contexte organisationnel : ${blockchain}`,
+        `Vous êtes : ${blockchain}`,
         `Urgence : ${urgencyLabels[urgency] ?? urgency}`,
         "",
         `Objet : ${subject}`,

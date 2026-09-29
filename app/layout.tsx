@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "BlockHack.io — Ingénierie infrastructure numérique, réseaux et DevSecOps",
+  title: "BlockHack.io — Assistance informatique à Versailles et à distance",
   description:
-    "BlockHack.io est un prestataire d'ingénierie et d'AMO spécialisé en infrastructure numérique, réseaux, télécoms, fibre optique et DevSecOps. Intervention en marchés publics, groupement d'entreprises et assistance à maîtrise d'ouvrage. Implanté en Île-de-France.",
+    "Réparation et sécurisation de PC, sites vitrines pour indépendants, sauvegarde et organisation des données. Particuliers et micro-entrepreneurs. Devis gratuit.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "32x32" },

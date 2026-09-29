@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export type ServiceCardProps = {
   iconUrl: string;
   iconAlt: string;
@@ -5,6 +7,8 @@ export type ServiceCardProps = {
   description: string;
   variant?: string;
   hasDecorations?: boolean;
+  href?: string;
+  linkLabel?: string;
 };
 
 export const ServiceCard = (props: ServiceCardProps) => {
@@ -35,6 +39,14 @@ export const ServiceCard = (props: ServiceCardProps) => {
                 {props.description}
               </p>
             </div>
+          )}
+          {props.href && (
+            <Link
+              href={props.href}
+              className="inline-block mt-6 text-cyan-400 hover:text-cyan-300 font-medium"
+            >
+              {props.linkLabel ?? "En savoir plus"}
+            </Link>
           )}
           {props.hasDecorations && (
             <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] md:text-[15.667px] md:leading-[25.0672px] relative items-center gap-x-0 flex justify-start gap-y-0">

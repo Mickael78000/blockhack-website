@@ -85,10 +85,13 @@ export const AuditRequestForm = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Soumettre une <span className="text-cyan-400">demande</span>
+              Demander un <span className="text-cyan-400">devis gratuit</span>
             </h1>
-            <p className="text-gray-400 text-lg">
-              Audit d’infrastructure, AMO, DevSecOps, réponse à appel d’offres — décrivez votre besoin et nous vous recontactons sous 48 h ouvrables.
+            <p className="text-gray-400 text-lg mb-4">
+              PC, site web ou données : décrivez votre besoin. Sans engagement. Je réponds généralement sous quelques jours ouvrés.
+            </p>
+            <p className="text-gray-500 text-sm max-w-2xl mx-auto">
+              Inutile de tout formuler « comme un informaticien ». Indiquez le type d’appareil ou l’adresse du site, ce qui est urgent, et si vous préférez le distanciel ou une venue sur place. Les échanges restent confidentiels.
             </p>
           </div>
 
@@ -132,7 +135,7 @@ export const AuditRequestForm = () => {
 
               <div className="mb-6">
                 <label className="block text-sm font-medium mb-2">
-                  Entreprise / Organisation
+                  Entreprise / activité (facultatif)
                 </label>
                 <input
                   type="text"
@@ -140,7 +143,7 @@ export const AuditRequestForm = () => {
                   value={formData.company}
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors"
-                  placeholder="Nom de votre entreprise"
+                  placeholder="Nom de votre activité, si vous en avez une"
                 />
               </div>
             </div>
@@ -168,20 +171,17 @@ export const AuditRequestForm = () => {
                     }}
                   >
                     <option value="" className="bg-gray-900 text-white">Sélectionner...</option>
-                    <option value="architecture_reseau" className="bg-gray-900 text-white">Architecture réseau / télécoms</option>
-                    <option value="devsecops" className="bg-gray-900 text-white">DevSecOps / S-SDLC</option>
-                    <option value="amo" className="bg-gray-900 text-white">AMO — assistance à maîtrise d’ouvrage</option>
-                    <option value="marche_public" className="bg-gray-900 text-white">Réponse à appel d’offres / groupement</option>
-                    <option value="fibre_vrd" className="bg-gray-900 text-white">Fibre optique / VRD</option>
-                    <option value="audit_infra" className="bg-gray-900 text-white">Audit d’infrastructure numérique</option>
-                    <option value="iac" className="bg-gray-900 text-white">Infrastructure as Code / infogérance</option>
+                    <option value="reparation_pc" className="bg-gray-900 text-white">Réparation / sécurisation de PC</option>
+                    <option value="site_web" className="bg-gray-900 text-white">Création ou maintenance de site web</option>
+                    <option value="donnees" className="bg-gray-900 text-white">Données et continuité d’activité</option>
+                    <option value="plusieurs" className="bg-gray-900 text-white">Plusieurs sujets / je ne sais pas</option>
                     <option value="other" className="bg-gray-900 text-white">Autre</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium mb-2">
-                    Contexte organisationnel <span className="text-red-500">*</span>
+                    Vous êtes <span className="text-red-500">*</span>
                   </label>
                   <select
                     name="blockchain"
@@ -197,12 +197,10 @@ export const AuditRequestForm = () => {
                     }}
                   >
                     <option value="" className="bg-gray-900 text-white">Sélectionner...</option>
-                    <option value="collectivite" className="bg-gray-900 text-white">Collectivité territoriale</option>
-                    <option value="etablissement_public" className="bg-gray-900 text-white">Établissement public (éducation, santé, culture)</option>
-                    <option value="operateur" className="bg-gray-900 text-white">Opérateur public / parapublic</option>
-                    <option value="administration" className="bg-gray-900 text-white">Administration centrale ou décentralisée</option>
-                    <option value="entreprise_privee" className="bg-gray-900 text-white">Entreprise privée</option>
-                    <option value="ese" className="bg-gray-900 text-white">ESN / bureau d’études</option>
+                    <option value="particulier" className="bg-gray-900 text-white">Particulier</option>
+                    <option value="artisan" className="bg-gray-900 text-white">Artisan / commerçant</option>
+                    <option value="freelance" className="bg-gray-900 text-white">Freelance / profession libérale</option>
+                    <option value="micro" className="bg-gray-900 text-white">Micro-entrepreneur / TPE</option>
                     <option value="other" className="bg-gray-900 text-white">Autre</option>
                   </select>
                 </div>
@@ -224,10 +222,10 @@ export const AuditRequestForm = () => {
                     backgroundSize: '1.5em 1.5em'
                   }}
                 >
-                  <option value="low" className="bg-gray-900 text-white">Basse — pas de contrainte calendaire</option>
-                  <option value="normal" className="bg-gray-900 text-white">Normale — délai standard (2–4 semaines)</option>
-                  <option value="high" className="bg-gray-900 text-white">Haute — date de remise d’offre proche</option>
-                  <option value="urgent" className="bg-gray-900 text-white">Urgente — moins d’une semaine</option>
+                  <option value="low" className="bg-gray-900 text-white">Pas pressé</option>
+                  <option value="normal" className="bg-gray-900 text-white">Délai normal</option>
+                  <option value="high" className="bg-gray-900 text-white">Assez urgent</option>
+                  <option value="urgent" className="bg-gray-900 text-white">Très urgent — moins d’une semaine</option>
                 </select>
               </div>
             </div>
@@ -247,7 +245,7 @@ export const AuditRequestForm = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors"
-                  placeholder="Audit d’infrastructure réseau — campus universitaire 3 sites"
+                  placeholder="PC qui rame, nouveau site vitrine, sauvegarde des photos…"
                 />
               </div>
 
@@ -262,10 +260,10 @@ export const AuditRequestForm = () => {
                   required
                   rows={8}
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors resize-none"
-                  placeholder="Décrivez votre contexte, vos contraintes techniques et organisationnelles, le calendrier prévisionnel et toute référence documentaire disponible..."
+                  placeholder="Décrivez le besoin, le matériel ou le site concerné, vos contraintes de temps…"
                 />
                 <p className="text-sm text-gray-400 mt-2">
-                  Pour joindre un cahier des charges, un CCTP ou un schéma réseau, envoyez-les directement à{" "}
+                  Pour joindre des captures d’écran ou un lien vers votre site, envoyez-les à{" "}
                   <a href="mailto:contact@blockhack.io" className="text-cyan-400 hover:text-cyan-300 transition-colors">contact@blockhack.io</a> en réponse à notre accusé de réception.
                 </p>
               </div>
@@ -277,7 +275,7 @@ export const AuditRequestForm = () => {
               <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <p className="text-green-400">
-                  Votre demande a été transmise. Nous vous recontactons sous 48 h ouvrables.
+                  Votre demande a été transmise. Je vous recontacte sous quelques jours ouvrés.
                 </p>
               </div>
             )}

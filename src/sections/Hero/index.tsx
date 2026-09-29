@@ -15,7 +15,7 @@ export const Hero = () => {
           className="relative text-[15.1297px] items-start box-border caret-transparent flex justify-end leading-[24.2075px] min-h-[auto] min-w-[auto] order-1 w-full pt-[45.3891px] inset-[0%] md:absolute md:text-[15.667px] md:leading-[25.0672px] md:min-h-0 md:min-w-0 md:order-none md:w-auto md:pt-0"
         >
           <motion.img
-            alt="Blockchain Technology"
+            alt=""
             src="https://c.animaapp.com/mhjqsyis9DbJQx/img/chatgpt-image-nov-4-2025-12_14_22-am.png"
             className="relative text-[15.1297px] aspect-[auto_835_/_705] box-border caret-transparent shrink-0 leading-[24.2075px] mr-[-10%] min-w-[110%] w-[110%] mt-[0%] md:text-[15.667px] md:leading-[25.0672px] md:mr-[-7%] md:mt-[-31.334px] md:min-w-[auto] md:w-3/5"
             style={{

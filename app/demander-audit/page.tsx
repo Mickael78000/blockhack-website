@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { AuditRequestForm } from "@features/audit-request/AuditRequestForm";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Soumettre une demande — BlockHack.io",
+  title: "Demander un devis informatique gratuit | BlockHack.io",
   description:
-    "Décrivez votre besoin en ingénierie d'infrastructure, AMO, DevSecOps ou réponse à appel d'offres. BlockHack.io vous recontacte sous 48 h ouvrables.",
+    "Les demandes de devis passent désormais par la page Contact.",
 };
 
-export default function DemanderAuditPage() {
-  return <AuditRequestForm />;
+export default function DemanderAuditRedirectPage() {
+  redirect("/contact");
 }

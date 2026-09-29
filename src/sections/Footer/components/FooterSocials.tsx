@@ -101,11 +101,11 @@ export const FooterSocials = () => {
            ·  
         </div>
         <a
-          href="/"
+          href="/politique-confidentialite"
           className="text-[15.1297px] font-normal items-center box-border caret-transparent gap-x-[5.67364px] flex shrink-0 justify-start leading-[24.2075px] max-w-full gap-y-[5.67364px] underline text-nowrap pr-[3.78243px] md:text-[15.667px] md:gap-x-[5.87513px] md:leading-[25.0672px] md:gap-y-[5.87513px] md:pr-[3.91675px] hover:text-cyan-400 hover:border-cyan-400"
         >
           <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-nowrap md:text-[15.667px] md:leading-[25.0672px]">
-            Impressum
+            Mentions / confidentialité
           </div>
         </a>
       </div>
