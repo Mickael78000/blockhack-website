@@ -183,7 +183,7 @@ function makeNode(id: number, pool: Array<{ text: string; isLatex: boolean }>): 
   const dur = isMobileDevice ? rand(30, 50) : rand(40, 70); // Mobile: faster animations
   const rotStart = isMobileDevice ? '0deg' : `${rand(-20, 20)}deg`; // Mobile: no rotation
   const rotEnd = isMobileDevice ? '0deg' : `${rand(-20, 20)}deg`;
-  const fontSize = isMobileDevice ? `${rand(12, 20)}px` : `${rand(14, 28)}px`; // Mobile: smaller text
+  const fontSize = isMobileDevice ? `${rand(12, 20)}px` : `${rand(14, 28)}px`; // Mobile: half the previous size
   const weight = randChoice(["font-light", "font-normal", "font-medium"]);
   const blur = Math.random() < 0.2 ? "blur-[0.5px]" : "";
   const glow = Math.random() < 0.5 ? "[text-shadow:0_0_8px_rgba(255,255,255,0.25)]" : "";

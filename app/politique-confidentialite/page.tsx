@@ -15,15 +15,15 @@ export default function PolitiqueConfidentialitePage() {
 
       <div className="relative pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-3xl relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
+          <h1 className="text-lg md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
             Politique de confidentialité
           </h1>
-          <p className="text-gray-400 text-sm mb-12">
+          <p className="text-gray-400 text-[0.4375rem] mb-12">
             Dernière mise à jour : mai 2025
           </p>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold font-space_grotesk mb-4">1. Responsable de traitement</h2>
+            <h2 className="text-xs font-bold font-space_grotesk mb-4">1. Responsable de traitement</h2>
             <p className="text-gray-300 leading-relaxed">
               Le responsable de traitement est <strong>Mickaël Girondeau</strong>, exploitant sous
               l'enseigne BlockHack.io (micro-entreprise), joignable à{" "}
@@ -34,7 +34,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold font-space_grotesk mb-4">2. Données collectées</h2>
+            <h2 className="text-xs font-bold font-space_grotesk mb-4">2. Données collectées</h2>
             <p className="text-gray-300 leading-relaxed mb-3">
               Via le formulaire de contact / devis, les données suivantes peuvent être collectées :
             </p>
@@ -49,7 +49,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold font-space_grotesk mb-4">3. Finalité et base légale</h2>
+            <h2 className="text-xs font-bold font-space_grotesk mb-4">3. Finalité et base légale</h2>
             <p className="text-gray-300 leading-relaxed">
               Les données sont collectées pour traiter votre demande de devis ou de contact, assurer le
               suivi de la prestation et, le cas échéant, la facturation hors site. La base légale est
@@ -62,7 +62,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold font-space_grotesk mb-4">4. Durée de conservation</h2>
+            <h2 className="text-xs font-bold font-space_grotesk mb-4">4. Durée de conservation</h2>
             <p className="text-gray-300 leading-relaxed">
               Les données sont conservées pour une durée maximale de <strong>12 mois</strong> à
               compter de la réception de la demande. Passé ce délai, elles sont supprimées ou
@@ -71,7 +71,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold font-space_grotesk mb-4">5. Destinataires des données</h2>
+            <h2 className="text-xs font-bold font-space_grotesk mb-4">5. Destinataires des données</h2>
             <p className="text-gray-300 leading-relaxed">
               Les données du formulaire transistent par le serveur du site (route de contact) puis
               sont transmises par e-mail via un prestataire d'envoi SMTP, uniquement pour joindre
@@ -80,7 +80,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold font-space_grotesk mb-4">6. Vos droits</h2>
+            <h2 className="text-xs font-bold font-space_grotesk mb-4">6. Vos droits</h2>
             <p className="text-gray-300 leading-relaxed mb-3">
               Conformément au RGPD, vous disposez des droits suivants :
             </p>
@@ -101,7 +101,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold font-space_grotesk mb-4">7. Réclamation auprès de la CNIL</h2>
+            <h2 className="text-xs font-bold font-space_grotesk mb-4">7. Réclamation auprès de la CNIL</h2>
             <p className="text-gray-300 leading-relaxed">
               Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une
               réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) :{" "}
@@ -117,7 +117,7 @@ export default function PolitiqueConfidentialitePage() {
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-bold font-space_grotesk mb-4">8. Cookies et traceurs</h2>
+            <h2 className="text-xs font-bold font-space_grotesk mb-4">8. Cookies et traceurs</h2>
             <p className="text-gray-300 leading-relaxed">
               Ce site n'utilise pas de cookies de traçage, de cookies publicitaires ni d'outils
               d'analyse comportementale tiers. Aucun cookie de mesure d'audience n'est déposé sans

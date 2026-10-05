@@ -5,15 +5,15 @@ export const ServicesSection = () => {
   return (
     <div
       id="services"
-      className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] object-[0%_50%] pt-[30px] pb-[20px] md:text-[15.667px] md:leading-[25.0672px]"
+      className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] object-[0%_50%] pt-[30px] pb-[20px] md:text-[15.667px] md:leading-[25.0672px]"
     >
-      <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
+      <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <AnimatedSection direction="up">
-          <h2 className="text-cyan-400 text-[42px] font-bold box-border caret-transparent leading-[50.4px] text-left my-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:my-[19.5838px]">
+          <h2 className="text-cyan-400 text-[21px] font-bold box-border caret-transparent leading-[25.2px] text-left my-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:my-[19.5838px]">
             Trois façons de vous aider
           </h2>
         </AnimatedSection>
-        <div className="text-[15.1297px] box-border caret-transparent gap-x-[33.1038px] flex flex-col auto-cols-[1fr] items-stretch content-stretch [grid-template-areas:'._._Area'] grid-cols-[1fr] grid-rows-[auto] leading-[24.2075px] gap-y-[33.1038px] mt-0 md:text-[15.667px] md:gap-x-[34.2794px] md:grid md:flex-row md:items-stretch md:content-stretch md:grid-cols-[1fr_1fr_1fr] md:leading-[25.0672px] md:gap-y-[34.2794px] md:mt-[62.6681px]">
+        <div className="text-[7.5649px] box-border caret-transparent gap-x-[33.1038px] flex flex-col auto-cols-[1fr] items-stretch content-stretch [grid-template-areas:'._._Area'] grid-cols-[1fr] grid-rows-[auto] leading-[12.1038px] gap-y-[33.1038px] mt-0 md:text-[15.667px] md:gap-x-[34.2794px] md:grid md:flex-row md:items-stretch md:content-stretch md:grid-cols-[1fr_1fr_1fr] md:leading-[25.0672px] md:gap-y-[34.2794px] md:mt-[62.6681px]">
           <AnimatedSection delay={0.1} direction="up" className="h-full">
             <ServiceCard
               iconUrl="https://cdn.prod.website-files.com/6621233fd44f04553ba73645/66ccc0b538ab927b755e1d2a_icon%20frame1.svg"

@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <ContentPage wide>
-      <h1 className="text-4xl md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
+      <h1 className="text-lg md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
         Trois services, un même fil : vous accompagner dans la durée
       </h1>
-      <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+      <p className="text-gray-300 text-base mb-8 leading-relaxed font-bold font-space_grotesk">
         Réparer et sécuriser votre PC, créer et faire vivre votre site, protéger vos données. Ponctuel si besoin, suivi si vous le souhaitez. Devis gratuit, sans engagement.
       </p>
       <p className="text-gray-300 mb-12 leading-relaxed">
@@ -23,7 +23,7 @@ export default function ServicesPage() {
       </p>
 
       <section className="mb-14">
-        <h2 className="text-2xl font-bold font-space_grotesk mb-4">
+        <h2 className="text-base font-bold font-space_grotesk mb-4">
           Réparation, sécurisation et amélioration de PC
         </h2>
         <p className="text-gray-300 mb-4 leading-relaxed">
@@ -42,7 +42,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="mb-14">
-        <h2 className="text-2xl font-bold font-space_grotesk mb-4">
+        <h2 className="text-xs font-bold font-space_grotesk mb-4">
           Création et maintenance de sites web
         </h2>
         <p className="text-gray-300 mb-4 leading-relaxed">
@@ -61,7 +61,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="mb-14">
-        <h2 className="text-2xl font-bold font-space_grotesk mb-4">
+        <h2 className="text-xs font-bold font-space_grotesk mb-4">
           Gestion des données et continuité d’activité
         </h2>
         <p className="text-gray-300 mb-4 leading-relaxed">

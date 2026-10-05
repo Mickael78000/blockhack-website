@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 export default function ReparationPcPage() {
   return (
     <ContentPage>
-      <h1 className="text-4xl md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
+      <h1 className="text-lg md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
         Retrouver un PC fluide, propre et mieux protégé
       </h1>
-      <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+      <p className="text-gray-300 text-[0.5625rem] mb-8 leading-relaxed">
         Diagnostic, réparation, optimisation et conseils pour durer. Sans blabla, avec des explications à chaque étape.
       </p>
       <p className="text-gray-300 mb-10 leading-relaxed">
         Lenteur, plantages, virus suspect, disque plein : on finit par s’habituer, jusqu’au jour où ça bloque vraiment. Je commence par comprendre le problème, pas par vendre une pièce. Ensuite, on choisit ensemble : réparer, nettoyer, améliorer, ou préparer un changement de machine.
       </p>
 
-      <h2 className="text-2xl font-bold font-space_grotesk mb-4">Ce que je fais concrètement</h2>
+      <h2 className="text-xs font-bold font-space_grotesk mb-4">Ce que je fais concrètement</h2>
       <div className="space-y-4 text-gray-300 leading-relaxed mb-10">
         <p>
           <strong className="text-white">Dépannage.</strong> Je cherche la cause (logiciel, disque, mémoire, surchauffe, malwares) et je traite ce qui est utile.
@@ -46,12 +46,12 @@ export default function ReparationPcPage() {
         </p>
       </div>
 
-      <h2 className="text-2xl font-bold font-space_grotesk mb-4">Ce que vous y gagnez</h2>
+      <h2 className="text-xs font-bold font-space_grotesk mb-4">Ce que vous y gagnez</h2>
       <p className="text-gray-300 mb-10 leading-relaxed">
         Moins d’attente devant la machine. Moins de risque de tout perdre. Un poste plus sûr pour vos paiements, vos mails, vos dossiers. Une décision claire sur la suite, sans se faire imposer un PC neuf.
       </p>
 
-      <h2 className="text-2xl font-bold font-space_grotesk mb-4">Déroulement type</h2>
+      <h2 className="text-xs font-bold font-space_grotesk mb-4">Déroulement type</h2>
       <ol className="list-decimal list-inside text-gray-300 space-y-2 mb-10">
         <li>Vous décrivez les symptômes, l’âge approximatif du PC, si des données importantes sont dessus.</li>
         <li>Diagnostic à distance si c’est possible ; sur site si le matériel l’exige.</li>

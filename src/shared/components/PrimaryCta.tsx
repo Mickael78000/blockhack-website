@@ -15,7 +15,7 @@ export const PrimaryCta = ({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center justify-center text-white font-semibold font-space_grotesk bg-blue-700 hover:bg-fuchsia-500 px-6 py-3 rounded-[7px] text-lg md:text-xl ${className}`}
+      className={`inline-flex items-center justify-center text-white font-semibold font-space_grotesk bg-blue-700 hover:bg-fuchsia-500 px-6 py-3 rounded-[7px] text-[0.5625rem] md:text-xl ${className}`}
     >
       {children}
     </Link>

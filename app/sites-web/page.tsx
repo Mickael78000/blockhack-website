@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 export default function SitesWebPage() {
   return (
     <ContentPage>
-      <h1 className="text-4xl md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
+      <h1 className="text-lg md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
         Un site clair, qui inspire confiance et qui se met à jour
       </h1>
-      <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+      <p className="text-gray-300 text-[0.5625rem] mb-8 leading-relaxed">
         Vitrines et pages uniques pour indépendants. Conçu pour être compris, contacté, et entretenu.
       </p>
       <p className="text-gray-300 mb-10 leading-relaxed">
         Beaucoup de micro-entrepreneurs ont un site trop chargé, trop lent, ou plus mis à jour. Je vous aide à avoir une page lisible, un contact évident, et une image pro sans y passer vos week-ends. On part de votre activité réelle. Ensuite, si vous le souhaitez, je reste pour la maintenance.
       </p>
 
-      <h2 className="text-2xl font-bold font-space_grotesk mb-4">Ce que je fais concrètement</h2>
+      <h2 className="text-xs font-bold font-space_grotesk mb-4">Ce que je fais concrètement</h2>
       <div className="space-y-4 text-gray-300 leading-relaxed mb-10">
         <p>
           <strong className="text-white">Sites vitrines et one-page.</strong> Artisans, commerces, freelances, professions libérales : l’essentiel, bien présenté.
@@ -43,12 +43,12 @@ export default function SitesWebPage() {
         </p>
       </div>
 
-      <h2 className="text-2xl font-bold font-space_grotesk mb-4">Ce que vous y gagnez</h2>
+      <h2 className="text-xs font-bold font-space_grotesk mb-4">Ce que vous y gagnez</h2>
       <p className="text-gray-300 mb-10 leading-relaxed">
         Une image plus nette dès la première visite. Moins de messages « je n’ai pas trouvé le numéro ». Un site que vous n’avez pas peur d’ouvrir devant un client. La possibilité d’un suivi, pour ne pas tout réapprendre dans deux ans.
       </p>
 
-      <h2 className="text-2xl font-bold font-space_grotesk mb-4">Déroulement type</h2>
+      <h2 className="text-xs font-bold font-space_grotesk mb-4">Déroulement type</h2>
       <ol className="list-decimal list-inside text-gray-300 space-y-2 mb-10">
         <li>Échange : activité, objectifs, exemples de sites que vous aimez (ou pas).</li>
         <li>Proposition : périmètre, planning indicatif, devis gratuit.</li>

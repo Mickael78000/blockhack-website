@@ -84,13 +84,13 @@ export const AuditRequestForm = () => {
         <div className="container mx-auto max-w-4xl relative z-10">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-lg md:text-5xl font-bold mb-4">
               Demander un <span className="text-cyan-400">devis gratuit</span>
             </h1>
-            <p className="text-gray-400 text-lg mb-4">
+            <p className="text-gray-400 text-[0.5625rem] mb-4">
               PC, site web ou données : décrivez votre besoin. Sans engagement. Je réponds généralement sous quelques jours ouvrés.
             </p>
-            <p className="text-gray-500 text-sm max-w-2xl mx-auto">
+            <p className="text-gray-500 text-[0.4375rem] max-w-2xl mx-auto">
               Inutile de tout formuler « comme un informaticien ». Indiquez le type d’appareil ou l’adresse du site, ce qui est urgent, et si vous préférez le distanciel ou une venue sur place. Les échanges restent confidentiels.
             </p>
           </div>
@@ -99,11 +99,11 @@ export const AuditRequestForm = () => {
           <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
             {/* Personal Information */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Informations de contact</h2>
+              <h2 className="text-xs font-bold mb-6 text-cyan-400">Informations de contact</h2>
               
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label className="block text-[0.4375rem] font-medium mb-2">
                     Nom complet <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -118,7 +118,7 @@ export const AuditRequestForm = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label className="block text-[0.4375rem] font-medium mb-2">
                     Email <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -134,7 +134,7 @@ export const AuditRequestForm = () => {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium mb-2">
+                <label className="block text-[0.4375rem] font-medium mb-2">
                   Entreprise / activité (facultatif)
                 </label>
                 <input
@@ -150,11 +150,11 @@ export const AuditRequestForm = () => {
 
             {/* Project Details */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Nature de la prestation</h2>
+              <h2 className="text-xs font-bold mb-6 text-cyan-400">Nature de la prestation</h2>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label className="block text-[0.4375rem] font-medium mb-2">
                     Type de prestation <span className="text-red-500">*</span>
                   </label>
                   <select
@@ -180,7 +180,7 @@ export const AuditRequestForm = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label className="block text-[0.4375rem] font-medium mb-2">
                     Vous êtes <span className="text-red-500">*</span>
                   </label>
                   <select
@@ -207,7 +207,7 @@ export const AuditRequestForm = () => {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium mb-2">
+                <label className="block text-[0.4375rem] font-medium mb-2">
                   Urgence
                 </label>
                 <select
@@ -232,10 +232,10 @@ export const AuditRequestForm = () => {
 
             {/* Message */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold mb-6 text-cyan-400">Votre demande</h2>
+              <h2 className="text-xs font-bold mb-6 text-cyan-400">Votre demande</h2>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium mb-2">
+                <label className="block text-[0.4375rem] font-medium mb-2">
                   Objet <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -250,7 +250,7 @@ export const AuditRequestForm = () => {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-medium mb-2">
+                <label className="block text-[0.4375rem] font-medium mb-2">
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -262,7 +262,7 @@ export const AuditRequestForm = () => {
                   className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-400 transition-colors resize-none"
                   placeholder="Décrivez le besoin, le matériel ou le site concerné, vos contraintes de temps…"
                 />
-                <p className="text-sm text-gray-400 mt-2">
+                <p className="text-[0.4375rem] text-gray-400 mt-2">
                   Pour joindre des captures d’écran ou un lien vers votre site, envoyez-les à{" "}
                   <a href="mailto:contact@blockhack.io" className="text-cyan-400 hover:text-cyan-300 transition-colors">contact@blockhack.io</a> en réponse à notre accusé de réception.
                 </p>
@@ -308,7 +308,7 @@ export const AuditRequestForm = () => {
               )}
             </button>
 
-            <p className="text-sm text-gray-400 text-center mt-4">
+            <p className="text-[0.4375rem] text-gray-400 text-center mt-4">
               Les informations recueillies via ce formulaire sont utilisées uniquement pour traiter votre demande (base légale : mesures précontractuelles, art. 6.1.b RGPD). Les champs obligatoires sont nécessaires au traitement. Vos données sont conservées 12 mois maximum et ne sont ni cédées ni utilisées à des fins commerciales. Vous disposez de droits d'accès, de rectification, d'effacement et d'opposition, exercables à{" "}
               <a href="mailto:contact@blockhack.io" className="text-cyan-400 hover:text-cyan-300 transition-colors">contact@blockhack.io</a>.
               Vous pouvez également introduire une réclamation auprès de la{" "}

@@ -16,7 +16,7 @@ export const DesktopMenu = () => {
         <Link
           key={link.href}
           href={link.href}
-          className="relative text-white text-[15px] font-normal leading-[24px] px-2 py-3 md:text-[17.6254px] md:leading-[28.2006px] md:px-[15.667px] md:py-5 hover:text-cyan-400"
+          className="relative text-white text-[7.5px] font-normal leading-[12px] px-2 py-3 md:text-[17.6254px] md:leading-[28.2006px] md:px-[15.667px] md:py-5 hover:text-cyan-400"
         >
           {link.label}
         </Link>

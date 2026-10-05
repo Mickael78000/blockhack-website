@@ -3,7 +3,7 @@ export const MobileMenuButton = () => {
     <div
       aria-label="menu"
       role="button"
-      className="relative text-2xl box-border caret-transparent block float-right leading-[38.4px] min-h-[auto] min-w-[auto] md:hidden md:min-h-0 md:min-w-0"
+      className="relative text-xs box-border caret-transparent block float-right leading-[19.2px] min-h-[auto] min-w-[auto] md:hidden md:min-h-0 md:min-w-0"
     >
       <div className="items-center box-border caret-transparent flex flex-col h-12 justify-center mr-[-7.56485px] w-12 md:[align-items:normal] md:block md:flex-row md:h-auto md:justify-normal md:w-auto md:mr-0">
         <div className="bg-white box-border caret-transparent h-0.5 min-h-[auto] min-w-[auto] w-6 md:bg-transparent md:h-auto md:min-h-0 md:min-w-0 md:w-auto"></div>

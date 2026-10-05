@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 export default function AProposPage() {
   return (
     <ContentPage>
-      <h1 className="text-4xl md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
+      <h1 className="text-lg md:text-5xl font-bold font-space_grotesk mb-4 text-cyan-400">
         De la rigueur des environnements exigeants, au service de votre quotidien numérique
       </h1>
-      <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+      <p className="text-gray-300 text-[0.5625rem] mb-8 leading-relaxed">
         Ingénieur, ancien militaire, je mets aujourd’hui cette discipline au service des particuliers et des micro-entreprises — avec pédagogie et discrétion.
       </p>
       <p className="text-gray-300 mb-6 leading-relaxed">
@@ -24,7 +24,7 @@ export default function AProposPage() {
         J’ai choisi une reconversion vers l’informatique pour être utile près des gens : particuliers, artisans, commerçants, freelances, professions libérales. Moins de grands discours, plus de service rendu. Une relation claire : respect, engagement sur ce qui a été promis.
       </p>
 
-      <h2 className="text-2xl font-bold font-space_grotesk mb-4">Ce que ça change pour vous</h2>
+      <h2 className="text-xs font-bold font-space_grotesk mb-4">Ce que ça change pour vous</h2>
       <div className="space-y-4 text-gray-300 leading-relaxed mb-10">
         <p>
           <strong className="text-white">Rigueur opérationnelle.</strong> Diagnostic, ordre des actions, vérification. On ne « tente un truc » au hasard sur vos fichiers.
@@ -40,7 +40,7 @@ export default function AProposPage() {
         </p>
       </div>
 
-      <h2 className="text-2xl font-bold font-space_grotesk mb-4">BlockHack.io</h2>
+      <h2 className="text-xs font-bold font-space_grotesk mb-4">BlockHack.io</h2>
       <p className="text-gray-300 mb-10 leading-relaxed">
         Micro-entreprise basée à Versailles (Île-de-France). Interventions à distance partout où c’est pertinent, et en présentiel lorsque le matériel ou la situation l’exigent.
       </p>

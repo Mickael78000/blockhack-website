@@ -117,13 +117,13 @@ export const ToolsSection = () => {
 
   return (
     <AnimatedSection direction="up" delay={0.2}>
-      <div className="relative text-[15.1297px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[24.2075px] w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] pt-[30px] pb-[20px] overflow-hidden md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px]">
+      <div className="relative text-[7.5649px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[12.1038px] w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] pt-[30px] pb-[20px] overflow-hidden md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px]">
         {/* Arrière-plan mathématique flottant avec transition de fondu */}
         <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-0 animate-fade-in" style={{ animation: 'fadeIn 1.5s ease-in-out forwards' }}>
           <FloatingMathScreen />
         </div>
-      <div className="relative z-10 text-[15.1297px] box-border caret-transparent leading-[24.2075px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
-        <div className="relative text-[15.1297px] box-border caret-transparent flex flex-col gap-10 leading-[24.2075px] mt-[110px] mx-auto w-full max-w-[980px] px-[10px] md:text-[15.667px] md:leading-[25.0672px] md:mt-[235px] md:flex-row md:items-start md:gap-[51px] md:px-0">
+      <div className="relative z-10 text-[7.5649px] box-border caret-transparent leading-[12.1038px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
+        <div className="relative text-[7.5649px] box-border caret-transparent flex flex-col gap-10 leading-[12.1038px] mt-[110px] mx-auto w-full max-w-[980px] px-[10px] md:text-[15.667px] md:leading-[25.0672px] md:mt-[235px] md:flex-row md:items-start md:gap-[51px] md:px-0">
           <div ref={containerRef} className="hidden md:block w-full md:max-w-[500px] md:w-[40%]">
             <div className="relative overflow-hidden rounded-[24px] shadow-xl bg-gray-900">
               {shouldLoadVideo ? (
@@ -164,13 +164,13 @@ export const ToolsSection = () => {
                 </>
               ) : (
                 <div className="w-full h-full min-h-[300px] flex items-center justify-center bg-gray-900">
-                  <p className="text-cyan-400 text-lg">Chargement...</p>
+                  <p className="text-cyan-400 text-[0.5625rem]">Chargement...</p>
                 </div>
               )}
             </div>
           </div>
-          <div className="text-[15.1297px] box-border caret-transparent leading-[24.2075px] text-left md:text-[15.667px] md:leading-[25.0672px] md:w-[60%]">
-            <h2 className="text-cyan-400 text-[42px] font-bold font-space_grotesk box-border caret-transparent leading-[50.4px] text-left mt-0 mb-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:mt-0 md:mb-[19.5838px]">
+          <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] text-left md:text-[15.667px] md:leading-[25.0672px] md:w-[60%]">
+            <h2 className="text-cyan-400 text-[21px] font-bold font-space_grotesk box-border caret-transparent leading-[25.2px] text-left mt-0 mb-[18.9121px] md:text-[50.9178px] md:leading-[61.1014px] md:mt-0 md:mb-[19.5838px]">
               Un accompagnement clair, utile au quotidien.
             </h2>
             <TrustedByLogos />
