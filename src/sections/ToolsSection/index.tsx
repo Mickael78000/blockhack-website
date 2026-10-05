@@ -1,9 +1,15 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { TrustedByLogos } from "@/sections/ToolsSection/components/TrustedByLogos";
-import FloatingMathScreen from "@/shared/components/floating_math_crypto_names_screen_react";
 import { AnimatedSection } from "@/shared/components/AnimatedSection";
+import { useDesktopEffects } from "@/shared/hooks/useDesktopEffects";
+
+const FloatingMathScreen = dynamic(
+  () => import("@/shared/components/floating_math_crypto_names_screen_react"),
+  { ssr: false }
+);
 
 export const ToolsSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -11,6 +17,7 @@ export const ToolsSection = () => {
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const desktopEffects = useDesktopEffects();
 
   // Detect mobile device
   useEffect(() => {
@@ -24,8 +31,11 @@ export const ToolsSection = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Lazy load video with Intersection Observer
+  // Lazy load video with Intersection Observer. Skip on small screens:
+  // the player is hidden there, and the fallback timer would still fetch the file.
   useEffect(() => {
+    if (window.innerWidth < 768) return;
+
     const container = containerRef.current;
     if (!container) return;
 
@@ -119,9 +129,11 @@ export const ToolsSection = () => {
     <AnimatedSection direction="up" delay={0.2}>
       <div className="relative text-[7.5649px] items-center box-border caret-transparent gap-x-[51px] flex flex-col justify-start leading-[12.1038px] w-full object-[0%_50%] gap-y-[51px] bg-[position:0px_0px] pt-[30px] pb-[20px] overflow-hidden md:text-[15.667px] md:flex-row md:justify-center md:leading-[25.0672px]">
         {/* Arrière-plan mathématique flottant avec transition de fondu */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-0 animate-fade-in" style={{ animation: 'fadeIn 1.5s ease-in-out forwards' }}>
-          <FloatingMathScreen />
-        </div>
+        {desktopEffects && (
+          <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-0 animate-fade-in" style={{ animation: 'fadeIn 1.5s ease-in-out forwards' }}>
+            <FloatingMathScreen />
+          </div>
+        )}
       <div className="relative z-10 text-[7.5649px] box-border caret-transparent leading-[12.1038px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
         <div className="relative text-[7.5649px] box-border caret-transparent flex flex-col gap-10 leading-[12.1038px] mt-[110px] mx-auto w-full max-w-[980px] px-[10px] md:text-[15.667px] md:leading-[25.0672px] md:mt-[235px] md:flex-row md:items-start md:gap-[51px] md:px-0">
           <div ref={containerRef} className="hidden md:block w-full md:max-w-[500px] md:w-[40%]">

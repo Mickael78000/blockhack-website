@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { useDesktopEffects } from '@/shared/hooks/useDesktopEffects';
 
 export const FloatingGeometries = () => {
+  const effectsEnabled = useDesktopEffects();
   const geometries = [
     { id: 1, type: 'cube', x: 10, y: 20, size: 60, rotation: 45, duration: 25 },
     { id: 2, type: 'triangle', x: 80, y: 15, size: 50, rotation: 0, duration: 30 },
@@ -56,6 +58,10 @@ export const FloatingGeometries = () => {
         return null;
     }
   };
+
+  if (!effectsEnabled) {
+    return null;
+  }
 
   return (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">

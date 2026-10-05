@@ -2,6 +2,9 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import katex from "katex";
+import "katex/dist/katex.min.css";
+
+const COMPUTER_MODERN_HREF = "https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css";
 
 interface FloatingNode {
   id: number;
@@ -33,6 +36,15 @@ interface FloatingNode {
  * Usage : rendre <FloatingMathScreen /> comme une page complète.
  */
 export default function FloatingMathScreen() {
+  useEffect(() => {
+    if (document.querySelector(`link[data-cm-fonts="true"]`)) return;
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = COMPUTER_MODERN_HREF;
+    link.dataset.cmFonts = "true";
+    document.head.appendChild(link);
+  }, []);
+
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-black text-white">
       <FloatingLayer />

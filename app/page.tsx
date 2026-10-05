@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <div className="text-white/70 text-[7.5649px] not-italic normal-nums font-medium accent-auto bg-black box-border caret-transparent block tracking-[normal] leading-[12.1038px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-space_grotesk md:text-[15.667px] md:leading-[25.0672px] relative overflow-x-hidden">
       <ScrollProgressBar />
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      <div className="fixed inset-0 z-0 pointer-events-none max-md:hidden motion-reduce:hidden">
         {/* Neon Glows */}
         <div className="absolute w-[400px] h-[400px] rounded-full bg-cyan-500/20 blur-[120px] -top-20 -left-20 animate-pulse"></div>
         <div className="absolute w-[300px] h-[300px] rounded-full bg-blue-500/15 blur-[100px] top-[20%] right-[10%] animate-pulse" style={{ animationDelay: '1s' }}></div>

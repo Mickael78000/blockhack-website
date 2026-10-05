@@ -17,7 +17,7 @@ export const TeamMemberCard = (props: TeamMemberCardProps) => {
               alt={props.imageAlt}
               className="text-[7.5649px] box-border caret-transparent inline-block h-full leading-[12.1038px] max-w-full object-contain md:text-[15.667px] md:leading-[25.0672px] scale-140"
             />
-            <div className="absolute inset-0 pointer-events-none" style={{
+            <div className="absolute inset-0 pointer-events-none hidden md:block" style={{
               maskImage: 'radial-gradient(ellipse at center, transparent 40%, black 80%)',
               WebkitMaskImage: 'radial-gradient(ellipse at center, transparent 40%, black 80%)',
               backdropFilter: 'blur(8px)'
@@ -36,7 +36,7 @@ export const TeamMemberCard = (props: TeamMemberCardProps) => {
           )}
           <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] pt-2.5 md:text-[15.667px] md:leading-[25.0672px]"></div>
         </div>
-        <div className="absolute text-[7.5649px] backdrop-blur-[13px] bg-black/50 box-border caret-transparent leading-[12.1038px] z-[1] inset-[0%] md:text-[15.667px] md:leading-[25.0672px]"></div>
+        <div className="absolute text-[7.5649px] bg-black/80 box-border caret-transparent leading-[12.1038px] z-[1] inset-[0%] md:text-[15.667px] md:leading-[25.0672px] md:bg-black/50 md:backdrop-blur-[13px]"></div>
       </div>
     </div>
   );

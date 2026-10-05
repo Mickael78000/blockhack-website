@@ -69,7 +69,7 @@ export const CaseStudyCard = (props: CaseStudyCardProps) => {
             {props.additionalContent}
           </div>
         </div>
-        <div className="absolute text-[7.5649px] backdrop-blur-[13px] bg-black/50 box-border caret-transparent leading-[12.1038px] z-[1] inset-[0%] md:text-[15.667px] md:leading-[25.0672px]"></div>
+        <div className="absolute text-[7.5649px] bg-black/80 box-border caret-transparent leading-[12.1038px] z-[1] inset-[0%] md:text-[15.667px] md:leading-[25.0672px] md:bg-black/50 md:backdrop-blur-[13px]"></div>
       </div>
     </div>
   );

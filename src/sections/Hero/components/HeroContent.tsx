@@ -7,7 +7,7 @@ export const HeroContent = () => {
         Ne laissez plus l'informatique vous freiner : BlockHack.io vous simplifie la vie et vous aide à concrétiser vos projets.
       </h1>
 
-      <p className="text-white/90 text-[12px] font-normal box-border caret-transparent leading-[18px] max-w-[544.669px] w-full mb-[28px] text-justify md:text-[19.6254px] md:leading-[30.2006px] md:max-w-[564.013px] md:mb-[62.6681px]">
+      <p className="text-white/90 text-[13px] font-normal box-border caret-transparent leading-[19px] max-w-[544.669px] w-full mb-[28px] text-justify md:text-[19.6254px] md:leading-[30.2006px] md:max-w-[564.013px] md:mb-[62.6681px]">
         Réparez et améliorez votre PC sans craindre de dépenser une fortune. Créons ensemble votre site web et laissez BlockHack.io vous accompagner dans vos projets numériques.
         <br />
         Pour les particuliers et les micro-entrepreneurs qui souhaitent avancer sans se perdre dans la technique.
