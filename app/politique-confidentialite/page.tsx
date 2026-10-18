@@ -41,10 +41,8 @@ export default function PolitiqueConfidentialitePage() {
             <ul className="list-disc list-inside text-gray-300 space-y-1">
               <li>Nom complet (obligatoire)</li>
               <li>Adresse e-mail (obligatoire)</li>
-              <li>Entreprise / organisation (optionnel)</li>
-              <li>Type de prestation, contexte organisationnel, niveau d'urgence</li>
-              <li>Objet et message libre décrivant la demande</li>
-              <li>Pièces jointes éventuelles (transmises uniquement par votre client de messagerie)</li>
+              <li>Téléphone (facultatif)</li>
+              <li>Type de besoin et message décrivant la demande</li>
             </ul>
           </section>
 
@@ -71,10 +69,10 @@ export default function PolitiqueConfidentialitePage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold font-space_grotesk mb-4">5. Destinataires des données</h2>
             <p className="text-gray-300 leading-relaxed">
-              Les données sont transmises exclusivement via votre propre client de messagerie
-              (protocole <code className="text-cyan-400">mailto:</code>) et ne transitent par aucun
-              serveur tiers, base de données ou service d'envoi d'e-mails applicatif côté site.
-              Elles ne sont ni cédées, ni vendues, ni partagées avec des tiers.
+              Les données sont transmises au serveur du site pour envoyer votre demande par e-mail
+              à BlockHack.io. Elles ne sont pas enregistrées dans une base de données et ne sont ni
+              cédées ni vendues. Les prestataires techniques nécessaires à l’hébergement et à
+              l’acheminement des e-mails peuvent traiter ces données pour assurer le service.
             </p>
           </section>
 

@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "BlockHack.io — Ingénierie infrastructure numérique, réseaux et DevSecOps",
+  title: "BlockHack — Diagnostic numérique et assistance informatique",
   description:
-    "BlockHack.io est un prestataire d'ingénierie et d'AMO spécialisé en infrastructure numérique, réseaux, télécoms, fibre optique et DevSecOps. Intervention en marchés publics, groupement d'entreprises et assistance à maîtrise d'ouvrage. Implanté en Île-de-France.",
+    "Un socle numérique simple, fiable et maîtrisé pour indépendants, auto-entrepreneurs, TPE et praticiens. Diagnostic offert à Versailles et environs.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "32x32" },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#101614",
 };
 
 export default function RootLayout({
