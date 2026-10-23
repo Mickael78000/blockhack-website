@@ -14,11 +14,13 @@ export async function POST(req: NextRequest) {
 
     const name = typeof body.name === "string" ? body.name.trim() : "";
     const email = typeof body.email === "string" ? body.email.trim() : "";
+    const phone = typeof body.phone === "string" ? body.phone.trim() : "";
     const company = typeof body.company === "string" ? body.company.trim() : "";
-    const subject = typeof body.subject === "string" ? body.subject.trim() : "";
+    const need = typeof body.need === "string" ? body.need.trim() : "";
+    const subject = typeof body.subject === "string" ? body.subject.trim() : need ? `Demande : ${need}` : "";
     const message = typeof body.message === "string" ? body.message.trim() : "";
-    const projectType = typeof body.projectType === "string" ? body.projectType.trim() : "";
-    const blockchain = typeof body.blockchain === "string" ? body.blockchain.trim() : "";
+    const projectType = typeof body.projectType === "string" ? body.projectType.trim() : need;
+    const blockchain = typeof body.blockchain === "string" ? body.blockchain.trim() : need ? "Indépendant, TPE ou praticien" : "";
     const urgency = typeof body.urgency === "string" ? body.urgency.trim() : "normal";
 
     const missing: string[] = [];
@@ -54,6 +56,7 @@ export async function POST(req: NextRequest) {
       text: [
         `Nom : ${name}`,
         `Email : ${email}`,
+        `Téléphone : ${phone || "—"}`,
         `Entreprise : ${company || "—"}`,
         `Type de prestation : ${projectType}`,
         `Vous êtes : ${blockchain}`,

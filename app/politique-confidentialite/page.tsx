@@ -41,6 +41,7 @@ export default function PolitiqueConfidentialitePage() {
             <ul className="list-disc list-inside text-gray-300 space-y-1">
               <li>Nom complet (obligatoire)</li>
               <li>Adresse e-mail (obligatoire)</li>
+
               <li>Entreprise ou activité (optionnel)</li>
               <li>Type de prestation, profil (particulier, indépendant…), niveau d'urgence</li>
               <li>Objet et message libre décrivant la demande</li>
@@ -73,6 +74,7 @@ export default function PolitiqueConfidentialitePage() {
           <section className="mb-10">
             <h2 className="text-xs font-bold font-space_grotesk mb-4">5. Destinataires des données</h2>
             <p className="text-gray-300 leading-relaxed">
+
               Les données du formulaire transistent par le serveur du site (route de contact) puis
               sont transmises par e-mail via un prestataire d'envoi SMTP, uniquement pour joindre
               BlockHack.io. Elles ne sont ni cédées, ni vendues, ni utilisées à d'autres fins.

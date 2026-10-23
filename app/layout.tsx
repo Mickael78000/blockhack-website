@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
+
   title: "BlockHack.io — Assistance informatique à Versailles et à distance",
   description:
     "Réparation et sécurisation de PC, sites vitrines pour indépendants, sauvegarde et organisation des données. Particuliers et micro-entrepreneurs. Devis gratuit.",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#101614",
 };
 
 export default function RootLayout({
