@@ -119,110 +119,37 @@ function SectionHeading({
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#101614] text-slate-100">
-      <header className="relative z-10 border-b border-white/10">
-        <nav
-          aria-label="Navigation principale"
-          className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8"
-        >
-          <a href="#accueil" className="flex items-center gap-3" aria-label="BlockHack, accueil">
-            <Image src="/images/blockhack-logo.webp" alt="" width={44} height={44} priority className="h-11 w-11 object-contain" />
-            <span className="hidden text-xl font-semibold tracking-tight text-white sm:inline">BlockHack</span>
-          </a>
-          <div className="hidden items-center gap-7 text-sm text-slate-300 md:flex">
-            <a className="transition hover:text-white" href="#problemes">Vos besoins</a>
-            <a className="transition hover:text-white" href="#prestations">Prestations</a>
-            <a className="transition hover:text-white" href="#blockhack">Pourquoi BlockHack</a>
-          </div>
-          <a
-            href="#contact"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-teal-300 px-4 py-2 text-sm font-semibold text-[#10201c] transition hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
-          >
-            Réserver mon diagnostic <ArrowRight aria-hidden="true" size={16} />
-          </a>
-        </nav>
-      </header>
 
-      <section id="accueil" className="relative border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 md:grid-cols-[1.2fr_0.8fr] md:px-8 md:py-24">
-          <div>
-            <p className="mb-5 text-sm font-medium text-teal-300">Le numérique au service de votre activité</p>
-            <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl">
-              Votre socle numérique, simple, fiable et maîtrisé.
-            </h1>
-            <p className="mt-6 text-lg font-medium text-slate-200">
-              Pour indépendants, auto-entrepreneurs, TPE et praticiens.
-            </p>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300">
-              Votre site ne fonctionne plus ? Vos clients ne vous trouvent pas facilement ? Vos outils,
-              sauvegardes ou accès vous font perdre du temps ?
-            </p>
-            <p className="mt-3 max-w-2xl text-base leading-7 text-white">
-              BlockHack remet votre environnement numérique en état de travailler pour vous.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#contact"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-teal-300 px-5 py-3 font-semibold text-[#10201c] transition hover:bg-teal-200"
-              >
-                Réserver mon diagnostic offert <ArrowRight aria-hidden="true" size={17} />
-              </a>
-              <a
-                href="#prestations"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-white/20 px-5 py-3 font-medium text-white transition hover:border-white/50"
-              >
-                Découvrir les prestations <ArrowDownRight aria-hidden="true" size={17} />
-              </a>
-            </div>
-            <ul className="mt-8 flex flex-wrap gap-2" aria-label="Domaines d’intervention">
-              {["Assistance informatique", "Site, Google et LinkedIn", "Sauvegardes et sécurité de base"].map((item) => (
-                <li key={item} className="rounded-full border border-white/15 px-3 py-1.5 text-xs text-slate-300">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <aside className="border-l border-teal-300/50 py-2 pl-6 md:ml-auto md:max-w-sm md:pl-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-teal-300">Premier pas</p>
-            <p className="mt-4 text-2xl font-semibold leading-snug text-white">Un état des lieux, puis des choix clairs.</p>
-            <p className="mt-4 text-sm leading-6 text-slate-300">
-              Le diagnostic offert permet de repérer vos priorités avant de décider quoi faire, et dans quel ordre.
-            </p>
-            <a href="#prestations" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-teal-200 hover:text-white">
-              Voir les prestations <ArrowRight aria-hidden="true" size={16} />
-            </a>
-          </aside>
-        </div>
-      </section>
+    <div className="text-white/70 text-[7.5649px] not-italic normal-nums font-medium accent-auto bg-black box-border caret-transparent block tracking-[normal] leading-[12.1038px] list-outside list-disc min-h-full pointer-events-auto text-start indent-[0px] normal-case visible border-separate font-space_grotesk md:text-[15.667px] md:leading-[25.0672px] relative overflow-x-hidden">
+      <ScrollProgressBar />
+      <div className="fixed inset-0 z-0 pointer-events-none max-md:hidden motion-reduce:hidden">
+        {/* Neon Glows */}
+        <div className="absolute w-[400px] h-[400px] rounded-full bg-cyan-500/20 blur-[120px] -top-20 -left-20 animate-pulse"></div>
+        <div className="absolute w-[300px] h-[300px] rounded-full bg-blue-500/15 blur-[100px] top-[20%] right-[10%] animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute w-[500px] h-[500px] rounded-full bg-cyan-400/10 blur-[130px] top-[40%] left-[15%] animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute w-[350px] h-[350px] rounded-full bg-blue-600/20 blur-[110px] top-[60%] right-[20%] animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute w-[450px] h-[450px] rounded-full bg-cyan-500/15 blur-[140px] bottom-[10%] left-[30%] animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute w-[280px] h-[280px] rounded-full bg-blue-400/25 blur-[90px] bottom-[20%] right-[5%] animate-pulse" style={{ animationDelay: '2.5s' }}></div>
 
-      <section id="problemes" className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-        <SectionHeading eyebrow="Du concret, au quotidien" title="Les blocages que BlockHack résout" />
-        <ul className="grid gap-x-10 md:grid-cols-2">
-          {problems.map((problem) => (
-            <li key={problem} className="flex gap-3 border-t border-white/10 py-4 text-sm leading-6 text-slate-200">
-              <Check aria-hidden="true" className="mt-1 shrink-0 text-teal-300" size={17} />
-              <span>{problem}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section id="prestations" className="border-y border-white/10 bg-[#151d19]">
-        <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-          <SectionHeading
-            eyebrow="Des solutions lisibles"
-            title="Des prestations simples et cadrées"
-            description="Commencez par un diagnostic, puis choisissez la prestation adaptée à votre situation."
-          />
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {services.map((service) => (
-              <article
-                key={service.number}
-                className={`flex h-full flex-col border p-5 md:p-6 ${service.featured ? "border-teal-300/60 bg-[#19251f]" : "border-white/10 bg-[#101614]"}`}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <span className="text-xs font-semibold text-teal-300">{service.number}</span>
-                  {service.featured && <span className="text-right text-xs font-medium text-teal-200">Offre de lancement</span>}
+        {/* New Effects */}
+        <GridPattern />
+        <FloatingParticles />
+        <FloatingGeometries />
+        <LightBeams />
+      </div>
+      <div className="relative z-10">
+        <div className="fixed text-[7.5649px] box-border caret-transparent leading-[12.1038px] left-[0%] top-[0%] md:text-[15.667px] md:leading-[25.0672px] before:accent-auto before:caret-transparent before:text-white/70 before:table before:text-[7.5649px] before:not-italic before:normal-nums before:font-medium before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[12.1038px] before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-space_grotesk before:md:text-[15.667px] before:md:leading-[25.0672px] after:accent-auto after:caret-transparent after:clear-both after:text-white/70 after:table after:text-[7.5649px] after:not-italic after:normal-nums after:font-medium after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[12.1038px] after:list-outside after:list-disc after:pointer-events-auto after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-space_grotesk after:md:text-[15.667px] after:md:leading-[25.0672px]"></div>
+        <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] overflow-hidden md:text-[15.667px] md:leading-[25.0672px]">
+          <div className="relative text-[7.5649px] bg-no-repeat bg-cover box-border caret-transparent leading-[12.1038px] bg-[position:50%_0px] rounded-[7px] md:text-[15.667px] md:leading-[25.0672px]">
+            <div className="absolute text-[7.5649px] aspect-[0_/_1] bg-[radial-gradient(circle,rgba(255,255,255,0.19)_1px,rgba(0,0,0,0)_0px)] bg-repeat-round bg-size-[60px_60px] box-border caret-transparent h-full leading-[12.1038px] min-h-[1000px] bg-center inset-[0%] md:text-[15.667px] md:leading-[25.0672px]"></div>
+            <div className="relative text-[7.5649px] box-border caret-transparent leading-[12.1038px] md:text-[15.667px] md:leading-[25.0672px]">
+              <Navbar />
+              <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] overflow-hidden md:text-[15.667px] md:leading-[25.0672px]">
+                <Hero />
+              </div>
+              {/* <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] bg-[position:0px_0px] pt-[30px] md:text-[15.667px] md:leading-[25.0672px]">
+                <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
+                  <CaseStudiesCarousel />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold text-white">{service.name}</h3>
                 <p className="mt-2 text-lg font-semibold text-teal-200">{service.price}</p>

@@ -3,41 +3,20 @@ import { render, screen } from "@testing-library/react";
 import { ToolsSection } from "./index";
 
 describe("ToolsSection", () => {
-  it("renders the main headline and supporting copy", () => {
+  it("renders the section heading", () => {
     render(<ToolsSection />);
 
     expect(
       screen.getByRole("heading", {
         level: 2,
-        name: /proven tooling for dependable mainnet launches/i,
+        name: /un accompagnement clair, utile au quotidien/i,
       }),
-    ).toBeInTheDocument();
-
-    expect(
-      screen.getByText(
-        /blockhack.io builds and shares security tooling born from real audits/i,
-      ),
     ).toBeInTheDocument();
   });
 
-  it("lists all tool cards with their titles", () => {
+  it("shows the video loading placeholder before the file is in view", () => {
     render(<ToolsSection />);
 
-    expect(screen.getByRole("heading", { name: /^foundry$/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /solidity \(foundry\)/i })).toBeInTheDocument();
-  });
-
-  it("shows the trusted by heading and video container", () => {
-    render(<ToolsSection />);
-
-    expect(
-      screen.getByRole("heading", {
-        level: 2,
-        name: /trusted to keep launches incident-free/i,
-      }),
-    ).toBeInTheDocument();
-
-    // Video uses lazy loading, so initially shows loading placeholder
-    expect(screen.getByText(/loading video/i)).toBeInTheDocument();
+    expect(screen.getByText(/chargement/i)).toBeInTheDocument();
   });
 });

@@ -2,9 +2,10 @@ import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "BlockHack — Diagnostic numérique et assistance informatique",
+
+  title: "BlockHack.io — Assistance informatique à Versailles et à distance",
   description:
-    "Un socle numérique simple, fiable et maîtrisé pour indépendants, auto-entrepreneurs, TPE et praticiens. Diagnostic offert à Versailles et environs.",
+    "Réparation et sécurisation de PC, sites vitrines pour indépendants, sauvegarde et organisation des données. Particuliers et micro-entrepreneurs. Devis gratuit.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "32x32" },
@@ -32,16 +33,6 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
-          integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css"
-        />
       </head>
       <body>{children}</body>
     </html>
