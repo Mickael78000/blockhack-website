@@ -39,7 +39,7 @@ const services = [
   {
     number: "02",
     name: "Mise à niveau essentielle",
-    price: "300 € HT",
+    price: "350 € HT",
     introduction: "Pour remettre de l’ordre dans votre visibilité en ligne.",
     items: [
       "Mise à jour du site ou des informations essentielles",
@@ -54,7 +54,7 @@ const services = [
   {
     number: "03",
     name: "Socle numérique complet",
-    price: "500 € HT",
+    price: "550 € HT",
     introduction: "Pour disposer d’un environnement simple, fiable et sécurisé.",
     items: [
       "Diagnostic approfondi de vos outils et accès",
