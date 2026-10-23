@@ -195,25 +195,34 @@ export default function HomePage() {
         </div>
       </section>
 
-        {/* New Effects */}
-        <GridPattern />
-        <FloatingParticles />
-        <FloatingGeometries />
-        <LightBeams />
-      </div>
-      <div className="relative z-10">
-        <div className="fixed text-[7.5649px] box-border caret-transparent leading-[12.1038px] left-[0%] top-[0%] md:text-[15.667px] md:leading-[25.0672px] before:accent-auto before:caret-transparent before:text-white/70 before:table before:text-[7.5649px] before:not-italic before:normal-nums before:font-medium before:col-end-2 before:col-start-1 before:row-end-2 before:row-start-1 before:tracking-[normal] before:leading-[12.1038px] before:list-outside before:list-disc before:pointer-events-auto before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-space_grotesk before:md:text-[15.667px] before:md:leading-[25.0672px] after:accent-auto after:caret-transparent after:clear-both after:text-white/70 after:table after:text-[7.5649px] after:not-italic after:normal-nums after:font-medium after:col-end-2 after:col-start-1 after:row-end-2 after:row-start-1 after:tracking-[normal] after:leading-[12.1038px] after:list-outside after:list-disc after:pointer-events-auto after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-space_grotesk after:md:text-[15.667px] after:md:leading-[25.0672px]"></div>
-        <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] overflow-hidden md:text-[15.667px] md:leading-[25.0672px]">
-          <div className="relative text-[7.5649px] bg-no-repeat bg-cover box-border caret-transparent leading-[12.1038px] bg-[position:50%_0px] rounded-[7px] md:text-[15.667px] md:leading-[25.0672px]">
-            <div className="absolute text-[7.5649px] aspect-[0_/_1] bg-[radial-gradient(circle,rgba(255,255,255,0.19)_1px,rgba(0,0,0,0)_0px)] bg-repeat-round bg-size-[60px_60px] box-border caret-transparent h-full leading-[12.1038px] min-h-[1000px] bg-center inset-[0%] md:text-[15.667px] md:leading-[25.0672px]"></div>
-            <div className="relative text-[7.5649px] box-border caret-transparent leading-[12.1038px] md:text-[15.667px] md:leading-[25.0672px]">
-              <Navbar />
-              <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] overflow-hidden md:text-[15.667px] md:leading-[25.0672px]">
-                <Hero />
-              </div>
-              {/* <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] bg-[position:0px_0px] pt-[30px] md:text-[15.667px] md:leading-[25.0672px]">
-                <div className="text-[7.5649px] box-border caret-transparent leading-[12.1038px] max-w-[1248.2px] w-full mx-auto px-[25px] py-5 md:text-[15.667px] md:leading-[25.0672px] md:max-w-[1292.53px]">
-                  <CaseStudiesCarousel />
+      <section id="problemes" className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+        <SectionHeading eyebrow="Du concret, au quotidien" title="Les blocages que BlockHack résout" />
+        <ul className="grid gap-x-10 md:grid-cols-2">
+          {problems.map((problem) => (
+            <li key={problem} className="flex gap-3 border-t border-white/10 py-4 text-sm leading-6 text-slate-200">
+              <Check aria-hidden="true" className="mt-1 shrink-0 text-teal-300" size={17} />
+              <span>{problem}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section id="prestations" className="border-y border-white/10 bg-[#151d19]">
+        <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
+          <SectionHeading
+            eyebrow="Des solutions lisibles"
+            title="Des prestations simples et cadrées"
+            description="Commencez par un diagnostic, puis choisissez la prestation adaptée à votre situation."
+          />
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {services.map((service) => (
+              <article
+                key={service.number}
+                className={`flex h-full flex-col border p-5 md:p-6 ${service.featured ? "border-teal-300/60 bg-[#19251f]" : "border-white/10 bg-[#101614]"}`}
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <span className="text-xs font-semibold text-teal-300">{service.number}</span>
+                  {service.featured && <span className="text-right text-xs font-medium text-teal-200">Offre de lancement</span>}
                 </div>
                 <h3 className="mt-5 text-xl font-semibold text-white">{service.name}</h3>
                 <p className="mt-2 text-lg font-semibold text-teal-200">{service.price}</p>
